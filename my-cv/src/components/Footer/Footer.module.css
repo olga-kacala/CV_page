@@ -3,52 +3,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 10vh;
+  width: 100vw;
   color: #fff;
-  text-align: center;
   position: fixed;
   bottom: 0;
-  width: 100vw;
-  background-color: rgb(0, 99, 175);
+  background-color: rgb(46, 47, 47);
   padding: 0;
   font-size: small;
 }
 
-.footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
 .Lin {
   height: 20px;
-}
-
-@media (max-width: 450px) {
-  .footer {
-    width: 100vw;
-    height: 12vh;
-    flex-direction: column;
-    font-size: small;
-    padding: 0;
-    z-index: 3;
-  }
-
-  .footer img {
-    height: 15px;
-  }
-}
-
-@media (min-width: 450px) and (max-width: 821px) {
-  .footer {
-    width: 100vw;
-    height: 19vh;
-    flex-direction: column;
-    font-size: small;
-    padding: 0;
-    z-index: 3;
-  }
-
-  .footer img {
-    height: 15px;
-  }
 }
