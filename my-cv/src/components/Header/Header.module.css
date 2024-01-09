@@ -1,9 +1,64 @@
 .header {
-    height: 100vh;
-    width: 99vw;
-    background-color: deeppink;
+  display: flex;
+  width: 99vw;
+  background-color: rgb(142, 184, 134);
+  color: #333;
+}
+
+.sliderContainer {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  padding: 2vh;
+  background-color: rgb(72, 72, 73);
+  position: relative;
 }
 
 .profileImg {
-    width: 20vw;
+  width: 20vw;
+  height: auto;
+}
+
+.Logo {
+  height: 2vh;
+  padding: 2vh;
+}
+
+.contactContainer {
+  width: 20vw;
+  background-color: rgb(142, 184, 134);
+}
+
+.contact {
+  font-size: large;
+  padding: 2vh;
+}
+
+h1,
+.name {
+  padding: 2vh;
+  width: 20vw;
+}
+
+.profileTextContainer {
+  background-color: #333;
+  width: 60vw;
+  height: auto;
+  color: white;
+  padding: 2vh;
+}
+
+.profile {
+    align-items: center;
+  letter-spacing: 4px;
+  font-size: larger;
+  padding: 2vh;
+}
+
+.converContainer {
+  width: 20vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
 }
