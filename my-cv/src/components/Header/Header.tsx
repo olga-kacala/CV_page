@@ -1,15 +1,25 @@
 import classes from "./Header.module.css";
 import { useState } from "react";
 
+interface CoverContainerState {
+  translateX: number;
+  opacity: number;
+  coverClicked: boolean;
+  transition: string;
+}
+
 export function Header() {
-  const [coverContainerState, setCoverContainerState] = useState({
-    translateX: 0,
-    opacity: 1,
-    coverClicked: false,
-  });
+  const [coverContainerState, setCoverContainerState] =
+    useState<CoverContainerState>({
+      translateX: 0,
+      opacity: 1,
+      coverClicked: false,
+      transition: "transform 1.1s ease, opacity 1.1s ease",
+    });
 
   const handleCoverContainerClick = () => {
     setCoverContainerState((prevState) => ({
+      ...prevState,
       translateX: prevState.coverClicked ? 0 : 55,
       opacity: prevState.coverClicked ? 1 : 0.09,
       coverClicked: !prevState.coverClicked,
@@ -23,6 +33,7 @@ export function Header() {
           transform: `translateX(${coverContainerState.translateX}vw)`,
           opacity: coverContainerState.opacity,
           width: coverContainerState.coverClicked ? "0vw" : "40vw",
+          transition: coverContainerState.transition,
         }}
       >
         <img
@@ -33,9 +44,18 @@ export function Header() {
         />
         <div className={classes.contactContainer}>
           <h1>Olga Kacala</h1>
-          <div className={classes.contact}>Phone: +48 509 646 459</div>
-          <div className={classes.contact}>Email: olga.kacala@gmail.com</div>
-          <div className={classes.contact}>Location: Opole, Poland</div>
+          <div className={classes.contact}>
+            Phone:
+            <br /> +48 509 646 459
+          </div>
+          <div className={classes.contact}>
+            Email:
+            <br /> olga.kacala@gmail.com
+          </div>
+          <div className={classes.contact}>
+            Location:
+            <br /> Opole, Poland
+          </div>
           <a
             href="https://www.linkedin.com/in/olga-kacala/?locale=en_US"
             target="_blank"

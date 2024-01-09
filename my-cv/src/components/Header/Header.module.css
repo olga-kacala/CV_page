@@ -10,7 +10,7 @@
   flex-direction: row;
   width: 40vw;
   padding: 2vh;
-  background-color: rgb(72, 72, 73);
+  background-color: #333;
   position: relative;
 }
 
@@ -30,8 +30,11 @@
 }
 
 .contact {
-  font-size: large;
+  font-size: 1.2rem;
+  font-weight: 400;
   padding: 2vh;
+  color: white;
+  letter-spacing: 4px;
 }
 
 h1,
@@ -49,16 +52,8 @@ h1,
 }
 
 .profile {
-    align-items: center;
+  align-items: center;
   letter-spacing: 4px;
   font-size: larger;
   padding: 2vh;
-}
-
-.converContainer {
-  width: 20vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
 }
