@@ -108,7 +108,7 @@ export function Home() {
 
   const listItemVariants = {
     hidden: { opacity: 0, y: '-100%' },
-    visible: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0, transition: {durantion: 1.5, ease:'easeInOut'} },
   };
 
   const listVariants = {
@@ -116,10 +116,18 @@ export function Home() {
     visible: { opacity: 1, transition: { staggerChildren: 1 } },
   };
 
-
   return (
     <div className={classes.home}>
-      <motion.ul variants={listVariants} initial="hidden" animate="visible">
+      <motion.div
+        ref={educationRef}
+        animate={{ opacity: 1, y: `${scrollProgress * 0}vh`, translateZ: 0 }}
+        initial={{ opacity: 0, y: '-100vh', translateZ: 0 }}
+        transition={{ duration: 3, ease: 'easeInOut' }}
+        style={{ overflow: 'hidden' }}
+      >
+        <div>
+          <h2>My timeline</h2>
+          <motion.ul variants={listVariants} initial="hidden" animate="visible">
             {experiences.map((experience, index) => (
               <motion.li
                 key={index}
@@ -142,6 +150,7 @@ export function Home() {
             ))}
           </motion.ul>
         </div>
-     
+      </motion.div>
+    </div>
   );
 }
