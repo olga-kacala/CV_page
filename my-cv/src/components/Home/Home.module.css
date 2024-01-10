@@ -1,6 +1,13 @@
 .home {
- height: 90vh;
- width: 50vw;
+ height: auto;
+ width: 100vw;
  color: rgb(22, 21, 21);
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    background-color: red;
 }
 
