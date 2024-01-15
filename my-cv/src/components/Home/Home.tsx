@@ -40,7 +40,7 @@ export function Home() {
       institution: "AGH University of Krakow",
       date: "2008 - 2012",
       details: [
-        "Faculty of Material Science and Ceramics",
+        "Faculty: Material Science and Ceramics",
         "Field of Study: Chemical Technology",
         "Field of Specialization: Technology of Building Materials",
       ],
@@ -123,7 +123,9 @@ export function Home() {
       institution: "AGH University of Krakow",
       date: "Nov 2023 - Jun 2024",
       details: [
-        "Computer Science – Design, Programming, and System Operation postgraduate studies encompass a comprehensive curriculum across two semesters, emphasizing hands-on learning of languages such as Java, Python, HTML, CSS, SQL and computer graphics.",
+        "Faculty: Computer Science",
+        "Field of Study: Design, Programming and System Operation",
+        "Worked in Java, Python, HTML, CSS, SQL and computer graphics",
       ],
     },
 
