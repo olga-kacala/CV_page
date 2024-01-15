@@ -1,13 +1,48 @@
 .home {
  height: auto;
- width: 100vw;
+ width: 99vw;
  color: rgb(22, 21, 21);
 }
 
-li {
-    margin: 0;
-    padding: 0;
-    width: 90vw;
-    background-color: #333;
+h2 {
+  padding: 40px;
+  width: 20vw;
+  letter-spacing: 4px;
 }
 
+h3 {
+  letter-spacing: 2px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0;
+    width: auto;
+    font-weight: 400;
+    font-size: large; 
+}
+
+.education {
+    width: 50vw;
+    min-height: 187px;
+    background-color: rgb(142, 184, 134);
+    color: #333;
+    padding: 1vw
+  }
+  
+  .experience {
+    width: 50vw;
+    min-height: 187px;
+    background-color: #333; 
+    color: white;
+    padding: 1vw
+  }
+
+  .education:hover,
+  .experience:hover {
+    background-color: rgb(241,241,241);
+    color: #333;
+  }
+  

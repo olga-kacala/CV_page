@@ -35,18 +35,20 @@ export function Home() {
 
   const experiences = [
     {
+      class:"education",
       title: "Engineer's Degree",
-      institution: "University of Science and Technology in Kraków",
+      institution: "AGH University of Krakow",
       date: "2008 - 2012",
       details: [
-        "Managed H&S, Environmental, and Quality Department with 2 laboratories",
-        "Coordinated root cause analyses with multi-department teams",
-        "Maintained H&S and Environmental standards within ISO 14001 and 45001.",
+        "Faculty of Material Science and Ceramics",
+        "Field of Study: Chemical Technology",
+        "Field of Specialization: Technology of Building Materials",
       ],
     },
     {
+      class:"education",
       title: "Master's Degree",
-      institution: "University of Science and Technology in Kraków",
+      institution: "AGH University of Krakow",
       date: "2012 - 2013",
       details: [
         "Faculty of Material Science and Ceramics",
@@ -55,14 +57,16 @@ export function Home() {
       ],
     },
     {
-      title: "Engineering Technologist",
+      class:"experience",
+      title: "Technology Specialist",
       institution: "The Institute of Ceramics and Building Materials; Opole",
-      date: "Jun 2014 - Feb 2017",
+      date: "2014 - 2017",
     },
     {
+      class:"experience",
       title: "Process & Quality Specialist",
       institution: "Skamol; Opole",
-      date: "Feb 2017 - Oct 2018",
+      date: "2017 - 2018",
       details: [
         "Established a new quality laboratory and set procedures",
         "Member of the Start-up Team in Opole plant",
@@ -70,9 +74,10 @@ export function Home() {
       ],
     },
     {
+      class:"experience",
       title: "Process & Quality Manager",
       institution: "Skamol; Opole",
-      date: "Oct 2018 - Feb 2019",
+      date: "2018 - 2019",
       details: [
         "Extended Quality Department",
         "Verified product quality against the cost of production",
@@ -80,21 +85,29 @@ export function Home() {
       ],
     },
     {
+      class:"experience",
       title: "Business Unit QHSE Manager",
       institution: "Skamol; Opole",
-      date: "Feb 2019 - Dec 2020",
+      date: "2019 - 2020",
       details: [
         "Standardized QHSE procedures in BU Boards production plants",
         "Led the implementation project of a new production line in Opole plant",
       ],
     },
     {
+      class:"experience",
       title: "QHSE Manager",
       institution: "McBride; Strzelce Opolskie",
-      date: "Dec 2020 - Nov 2022",
+      date: "2020 - 2022",
+      details: [
+        "Managed H&S, Environmental, and Quality Department with 2 laboratories",
+        "Coordinated root cause analyses with multi-department teams",
+        "Maintained H&S and Environmental standards within ISO 14001 and 45001",
+      ],
     },
     {
-      title: "Front-End Developer",
+      class:"education",
+      title: "Front-End Developer Diploma",
       institution: "Infoshare Academy Sp. z o.o.",
       date: "Nov 2022 - Feb 2023",
       details: [
@@ -104,6 +117,16 @@ export function Home() {
         "Utilized Scrum (Jira) and teamwork for project development",
       ],
     },
+    {
+      class:"education",
+      title: "Postgraduate Diploma",
+      institution: "AGH University of Krakow",
+      date: "Nov 2023 - Jun 2024",
+      details: [
+        "Computer Science – Design, Programming, and System Operation postgraduate studies encompass a comprehensive curriculum across two semesters, emphasizing hands-on learning of languages such as Java, Python, HTML, CSS, SQL and computer graphics.",
+      ],
+    },
+
   ];
 
   const listItemVariants = {
@@ -132,7 +155,7 @@ export function Home() {
               <motion.li
                 key={index}
                 variants={listItemVariants}
-                style={{ marginBottom: '20px' }}
+                className={classes[experience.class]} // Use the dynamically generated class name
               >
                 <h3>{experience.title}</h3>
                 <p>{experience.institution}</p>
