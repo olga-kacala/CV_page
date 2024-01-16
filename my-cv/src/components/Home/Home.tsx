@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import classes from "./Home.module.css";
 import { motion } from "framer-motion";
 
@@ -7,7 +7,7 @@ export function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredExperience, setHoveredExperience] = useState<number | null>(null);
-
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,12 +28,34 @@ export function Home() {
       }
     };
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Start observing the element
+    if (educationRef.current) {
+      observer.observe(educationRef.current);
+    }
+
+    // Event listener for scroll
     window.addEventListener("scroll", handleScroll);
 
+    // Cleanup
     return () => {
+      observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
 
   const experiences = [
     {
@@ -135,7 +157,7 @@ export function Home() {
 
   const listItemVariants = {
     hidden: { opacity: 0, y: '-100%' },
-    visible: { opacity: 1, y: 0, transition: {durantion: 1.5, ease:'easeInOut'} },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: 'easeInOut' } },
   };
 
   const listVariants = {
@@ -147,7 +169,11 @@ export function Home() {
     <div className={classes.home}>
       <motion.div
         ref={educationRef}
-        animate={{ opacity: 1, y: `${scrollProgress * 0}vh`, translateZ: 0 }}
+        animate={{
+          opacity: isVisible ? 1 : 0,
+          y: isVisible ? `${scrollProgress * 0}vh` : 0,
+          translateZ: 0,
+        }}
         initial={{ opacity: 0, y: "-100vh", translateZ: 0 }}
         transition={{ duration: 3, ease: "easeInOut" }}
         style={{ overflow: "hidden" }}
@@ -157,7 +183,7 @@ export function Home() {
           <motion.ul variants={listVariants} initial="hidden" animate="visible">
             {experiences.map((experience, index) => (
               <div
-              className={classes.timelineItem}
+                className={classes.timelineItem}
                 key={index}
                 onMouseEnter={() => setHoveredExperience(index)}
                 onMouseLeave={() => setHoveredExperience(null)}

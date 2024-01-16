@@ -19,9 +19,9 @@ h3 {
 }
 
 ul {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 li {
@@ -37,7 +37,8 @@ p {
   margin: 0;
 }
 
-.education, .experience {
+.education,
+.experience {
   width: 50vw;
   padding: 1vw;
   margin-bottom: 20px;
