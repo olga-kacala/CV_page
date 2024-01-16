@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 export function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [hoveredExperience, setHoveredExperience] = useState<number | null>(null);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -146,32 +148,38 @@ export function Home() {
       <motion.div
         ref={educationRef}
         animate={{ opacity: 1, y: `${scrollProgress * 0}vh`, translateZ: 0 }}
-        initial={{ opacity: 0, y: '-100vh', translateZ: 0 }}
-        transition={{ duration: 3, ease: 'easeInOut' }}
-        style={{ overflow: 'hidden' }}
+        initial={{ opacity: 0, y: "-100vh", translateZ: 0 }}
+        transition={{ duration: 3, ease: "easeInOut" }}
+        style={{ overflow: "hidden" }}
       >
         <div>
           <h2>My timeline</h2>
           <motion.ul variants={listVariants} initial="hidden" animate="visible">
             {experiences.map((experience, index) => (
-              <motion.li
+              <div
+              className={classes.timelineItem}
                 key={index}
-                variants={listItemVariants}
-                className={classes[experience.class]} // Use the dynamically generated class name
+                onMouseEnter={() => setHoveredExperience(index)}
+                onMouseLeave={() => setHoveredExperience(null)}
               >
-                <h3>{experience.title}</h3>
-                <p>{experience.institution}</p>
-                <p>{experience.date}</p>
-                {experience.details && (
-                  <motion.ul variants={listVariants} initial="hidden" animate="visible">
-                    {experience.details.map((detail, i) => (
-                      <motion.li key={i} variants={listItemVariants}>
-                        {detail}
-                      </motion.li>
-                    ))}
-                  </motion.ul>
-                )}
-              </motion.li>
+                <motion.li
+                  variants={listItemVariants}
+                  className={classes[experience.class]}
+                >
+                  <h3>{experience.title}</h3>
+                  <p>{experience.institution}</p>
+                  <p>{experience.date}</p>
+                  {hoveredExperience === index && experience.details && (
+                    <motion.ul variants={listVariants} initial="hidden" animate="visible">
+                      {experience.details.map((detail, i) => (
+                        <motion.li key={i} variants={listItemVariants}>
+                          {detail}
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </motion.li>
+              </div>
             ))}
           </motion.ul>
         </div>
