@@ -3,6 +3,7 @@ export const Animation = () => {
   return (
     <div
     style={{
+      zIndex: 0,
       position: "relative",
       width: "100%",
       height: 0,
@@ -20,6 +21,7 @@ export const Animation = () => {
       title="Canva Animation"
       loading="lazy"
       style={{
+        zIndex: 0,
         position: "absolute",
         width: "100%",
         height: "100%",
@@ -29,10 +31,9 @@ export const Animation = () => {
         padding: 0,
         margin: 0,
       }}
-      src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF6IncKmzs&#x2F;view?embed"
+      src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF6IncKmzs&#x2F;view?embed" 
     ></iframe>
    
   </div>
 );
 };
-

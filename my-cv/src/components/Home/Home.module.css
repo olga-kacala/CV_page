@@ -59,3 +59,9 @@ p {
   background-color: rgb(241, 241, 241);
   color: #333;
 }
+
+.Projects {
+  background-color: red;
+  height: 30vh;
+}
+

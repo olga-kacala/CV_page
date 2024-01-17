@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import classes from "./Home.module.css";
 import { motion } from "framer-motion";
 import { Animation } from "../Animation/Animation";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
@@ -220,10 +221,13 @@ export function Home() {
           </motion.ul>
         </div>
       </motion.div>
-      <div>
-        {" "}
-        <Animation />
-      </div>
+
+     
+      <Animation />
+
+
+      <Link to="/Games"><div className={classes.Projects}>Projekty</div></Link>
+
     </div>
   );
 }
