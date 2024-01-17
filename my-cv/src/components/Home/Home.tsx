@@ -2,11 +2,15 @@ import { useEffect, useRef, useState } from "react";
 // import { Link } from "react-scroll";
 import classes from "./Home.module.css";
 import { motion } from "framer-motion";
+import { CartoonPerson } from "../CartoonPerson /CartoonPerson";
+import {Animation} from "../Animation/Animation"
 
 export function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [hoveredExperience, setHoveredExperience] = useState<number | null>(null);
+  const [hoveredExperience, setHoveredExperience] = useState<number | null>(
+    null
+  );
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -20,7 +24,7 @@ export function Home() {
           0,
           Math.min(
             1,
-            (position.top + window.innerHeight * 0.1) / window.innerHeight
+            (position.top + window.innerHeight * 1) / window.innerHeight
           )
         );
 
@@ -31,35 +35,31 @@ export function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
             setIsVisible(true);
           } else {
             setIsVisible(false);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 } 
     );
-
-    // Start observing the element
+ 
     if (educationRef.current) {
       observer.observe(educationRef.current);
     }
 
-    // Event listener for scroll
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-
   const experiences = [
     {
-      class:"education",
+      class: "education",
       title: "Engineer's Degree",
       institution: "AGH University of Krakow",
       date: "2008 - 2012",
@@ -70,7 +70,7 @@ export function Home() {
       ],
     },
     {
-      class:"education",
+      class: "education",
       title: "Master's Degree",
       institution: "AGH University of Krakow",
       date: "2012 - 2013",
@@ -81,13 +81,13 @@ export function Home() {
       ],
     },
     {
-      class:"experience",
+      class: "experience",
       title: "Technology Specialist",
       institution: "The Institute of Ceramics and Building Materials; Opole",
       date: "2014 - 2017",
     },
     {
-      class:"experience",
+      class: "experience",
       title: "Process & Quality Specialist",
       institution: "Skamol; Opole",
       date: "2017 - 2018",
@@ -98,7 +98,7 @@ export function Home() {
       ],
     },
     {
-      class:"experience",
+      class: "experience",
       title: "Process & Quality Manager",
       institution: "Skamol; Opole",
       date: "2018 - 2019",
@@ -109,7 +109,7 @@ export function Home() {
       ],
     },
     {
-      class:"experience",
+      class: "experience",
       title: "Business Unit QHSE Manager",
       institution: "Skamol; Opole",
       date: "2019 - 2020",
@@ -119,7 +119,7 @@ export function Home() {
       ],
     },
     {
-      class:"experience",
+      class: "experience",
       title: "QHSE Manager",
       institution: "McBride; Strzelce Opolskie",
       date: "2020 - 2022",
@@ -130,7 +130,7 @@ export function Home() {
       ],
     },
     {
-      class:"education",
+      class: "education",
       title: "Front-End Developer Diploma",
       institution: "Infoshare Academy Sp. z o.o.",
       date: "Nov 2022 - Feb 2023",
@@ -142,7 +142,7 @@ export function Home() {
       ],
     },
     {
-      class:"education",
+      class: "education",
       title: "Postgraduate Diploma",
       institution: "AGH University of Krakow",
       date: "Nov 2023 - Jun 2024",
@@ -152,17 +152,20 @@ export function Home() {
         "Worked in Java, Python, HTML, CSS, SQL and computer graphics",
       ],
     },
-
   ];
 
   const listItemVariants = {
-    hidden: { opacity: 0, y: '-100%' },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: 'easeInOut' } },
+    hidden: { opacity: 0, y: "-100%" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeInOut" },
+    },
   };
 
   const listVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 1 } },
+    visible: { opacity: 1, transition: { staggerChildren: 1.5 } },
   };
 
   return (
@@ -170,17 +173,17 @@ export function Home() {
       <motion.div
         ref={educationRef}
         animate={{
-          opacity: isVisible ? 1 : 0,
-          y: isVisible ? `${scrollProgress * 0}vh` : 0,
+          opacity: isVisible ? 1 : 0.5,
+          y: isVisible ? `${scrollProgress * 1}vh` : 0,
           translateZ: 0,
         }}
-        initial={{ opacity: 0, y: "-100vh", translateZ: 0 }}
-        transition={{ duration: 3, ease: "easeInOut" }}
+        initial={{ opacity: 0, y: "-0vh", translateZ: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         style={{ overflow: "hidden" }}
       >
         <div>
           <h2>My timeline</h2>
-          <motion.ul variants={listVariants} initial="hidden" animate="visible">
+          <motion.ul variants={listVariants} initial="hidden"  animate="visible" >
             {experiences.map((experience, index) => (
               <div
                 className={classes.timelineItem}
@@ -196,9 +199,15 @@ export function Home() {
                   <p>{experience.institution}</p>
                   <p>{experience.date}</p>
                   {hoveredExperience === index && experience.details && (
-                    <motion.ul variants={listVariants} initial="hidden" animate="visible">
+                    <motion.ul
+                      variants={listVariants}
+                      initial="hidden"
+                      animate={isVisible ? "visible" : "hidden"}
+                    >
                       {experience.details.map((detail, i) => (
-                        <motion.li key={i} variants={listItemVariants}>
+                        <motion.li key={i} variants={listItemVariants}
+                        initial="hidden"
+                      animate= "visible">
                           {detail}
                         </motion.li>
                       ))}
@@ -210,6 +219,8 @@ export function Home() {
           </motion.ul>
         </div>
       </motion.div>
+      <div> <Animation /></div>
+     
     </div>
   );
 }
