@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-// import { Link } from "react-scroll";
 import classes from "./Home.module.css";
 import { motion } from "framer-motion";
-import { CartoonPerson } from "../CartoonPerson /CartoonPerson";
-import {Animation} from "../Animation/Animation"
+import { Animation } from "../Animation/Animation";
 
 export function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
@@ -42,9 +40,9 @@ export function Home() {
           }
         });
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 }
     );
- 
+
     if (educationRef.current) {
       observer.observe(educationRef.current);
     }
@@ -183,7 +181,7 @@ export function Home() {
       >
         <div>
           <h2>My timeline</h2>
-          <motion.ul variants={listVariants} initial="hidden"  animate="visible" >
+          <motion.ul variants={listVariants} initial="hidden" animate="visible">
             {experiences.map((experience, index) => (
               <div
                 className={classes.timelineItem}
@@ -205,9 +203,12 @@ export function Home() {
                       animate={isVisible ? "visible" : "hidden"}
                     >
                       {experience.details.map((detail, i) => (
-                        <motion.li key={i} variants={listItemVariants}
-                        initial="hidden"
-                      animate= "visible">
+                        <motion.li
+                          key={i}
+                          variants={listItemVariants}
+                          initial="hidden"
+                          animate="visible"
+                        >
                           {detail}
                         </motion.li>
                       ))}
@@ -219,8 +220,10 @@ export function Home() {
           </motion.ul>
         </div>
       </motion.div>
-      <div> <Animation /></div>
-     
+      <div>
+        {" "}
+        <Animation />
+      </div>
     </div>
   );
 }
