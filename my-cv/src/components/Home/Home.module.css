@@ -2,6 +2,7 @@
   height: auto;
   width: 99vw;
   color: rgb(22, 21, 21);
+  scroll-behavior: smooth;
 }
 
 h2 {
@@ -60,8 +61,48 @@ p {
   color: #333;
 }
 
-.Projects {
-  background-color: red;
-  height: 30vh;
+.projectsText {
+  background-color: #333;
+  color: white;
+  letter-spacing: 2px;
+  animation-play-state: paused;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  padding: 40px 0 40px 40px;
+  font-size: larger;
 }
 
+.projectsText.visible {
+  animation: writeText 20s linear forwards;
+}
+
+.GroupProject {
+  height: 30vh;
+  width: 99vw;
+  background-color: rgb(241, 241, 241);
+}
+
+.IndividualProject {
+  height: 30vh;
+  width: 99vw;
+  background-color: rgb(241, 241, 241);
+}
+
+.PassionProject {
+  height: 30vh;
+  width: 99vw;
+  background-color: rgb(241, 241, 241);
+}
+
+.otherProject {
+  height: 30vh;
+  width: 99vw;
+  background-color: rgb(241, 241, 241);
+}
+
+@keyframes writeText {
+  to {
+    width: 100%;
+  }
+}

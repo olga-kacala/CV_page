@@ -1,4 +1,3 @@
-
 export const Animation = () => {
   return (
     <div
@@ -14,7 +13,7 @@ export const Animation = () => {
       overflow: "hidden",
       borderRadius: "8px",
       willChange: "transform",
-      boxShadow: "0 2px 8px 0 rgba(255, 255, 255, 0)",
+  
     }}
   >
     <iframe
@@ -30,6 +29,7 @@ export const Animation = () => {
         border: "none",
         padding: 0,
         margin: 0,
+       
       }}
       src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF6IncKmzs&#x2F;view?embed" 
     ></iframe>

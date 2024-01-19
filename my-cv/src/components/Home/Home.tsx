@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import classes from "./Home.module.css";
 import { motion } from "framer-motion";
 import { Animation } from "../Animation/Animation";
-import { Link } from "react-router-dom";
 
 export function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
@@ -11,6 +10,8 @@ export function Home() {
     null
   );
   const [isVisible, setIsVisible] = useState(false);
+  const projectsTextRef = useRef<HTMLDivElement>(null);
+  const [isProjectsTextVisible, setIsProjectsTextVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -167,12 +168,38 @@ export function Home() {
     visible: { opacity: 1, transition: { staggerChildren: 1.5 } },
   };
 
+  useEffect(() => {
+    const handleVisibility = (entries: IntersectionObserverEntry[]) => {
+      const [entry] = entries;
+
+      if (entry.isIntersecting) {
+        setIsProjectsTextVisible(true);
+      } else {
+        setIsProjectsTextVisible(false);
+      }
+    };
+
+    const projectsTextObserver = new IntersectionObserver(handleVisibility, {
+      threshold: 0.1,
+    });
+
+    if (projectsTextRef.current) {
+      projectsTextObserver.observe(projectsTextRef.current);
+    }
+
+    return () => {
+      if (projectsTextRef.current) {
+        projectsTextObserver.unobserve(projectsTextRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className={classes.home}>
       <motion.div
         ref={educationRef}
         animate={{
-          opacity: isVisible ? 1 : 0.5,
+          opacity: isVisible ? 1 : 0.9,
           y: isVisible ? `${scrollProgress * 1}vh` : 0,
           translateZ: 0,
         }}
@@ -222,12 +249,20 @@ export function Home() {
         </div>
       </motion.div>
 
-     
       <Animation />
 
+      <div
+  className={`${classes.projectsText} ${isProjectsTextVisible && classes.visible}`}
+  ref={projectsTextRef}
+>
+        Alright, let's get back to business...
+      </div>
 
-      <Link to="/Games"><div className={classes.Projects}>Projekty</div></Link>
-
+      <h2>My Projects</h2>
+      <div className={classes.GroupProject}></div>
+      <div className={classes.IndividualProject}></div>
+      <div className={classes.PassionProject}></div>
+      <div className={classes.otherProject}></div>
     </div>
   );
 }
