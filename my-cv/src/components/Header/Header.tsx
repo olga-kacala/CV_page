@@ -81,6 +81,15 @@ export function Header() {
               src={process.env.PUBLIC_URL + "/Img/github-logo.webp"}
             />
           </a>
+
+          <img
+              className={classes.Logo}
+              title="CV"
+              alt="CV download"
+              src={process.env.PUBLIC_URL + "/Img/download.png"}
+            />
+
+          
         </div>
 
         <div className={classes.coverContainer}></div>
@@ -96,11 +105,7 @@ export function Header() {
       >
         <h1>Hi</h1>
         <div className={classes.profile}>
-          As a seasoned professional with a multifaceted background, I bring a
-          unique blend of technical expertise and managerial skills. Holding
-          Engineer's degree in Computer Science from the University of Science
-          and Technology in Krakow, I have specialized in the design,
-          programming, and operation of systems.
+        With a diverse professional background, I offer a unique combination of technical expertise and managerial skills. Having pursued postgraduate studies in Computer Science at the University of Science and Technology in Krakow, I have specialized in the design, programming, and operation of systems
         </div>
       </div>
     </div>

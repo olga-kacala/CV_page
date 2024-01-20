@@ -252,17 +252,56 @@ export function Home() {
       <Animation />
 
       <div
-  className={`${classes.projectsText} ${isProjectsTextVisible && classes.visible}`}
-  ref={projectsTextRef}
->
+        className={`${classes.projectsText} ${
+          isProjectsTextVisible && classes.visible
+        }`}
+        ref={projectsTextRef}
+      >
         Alright, let's get back to business...
       </div>
 
       <h2>My Projects</h2>
-      <div className={classes.GroupProject}></div>
-      <div className={classes.IndividualProject}></div>
-      <div className={classes.PassionProject}></div>
-      <div className={classes.otherProject}></div>
+
+      <div className={classes.project}>
+        <a
+          href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            title="Pandoteka"
+            alt="Pandoteka"
+            src={process.env.PUBLIC_URL + "/Img/Pandoteka.png"}
+          />
+        </a>
+      </div>
+      <div className={classes.project}>
+        <a
+          href="https://olga-kacala.github.io/turystyka-kursy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            title="Krakow Courses"
+            alt="Krakow Courses"
+            src={process.env.PUBLIC_URL + "/Img/KrakowCourses.png"}
+          />
+        </a>
+      </div>
+      
+      <div className={classes.project}>
+        <a
+          href="https://olga-kacala.github.io/turystyka-kursy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            title="Walkie"
+            alt="Walkie"
+            src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
+          />
+        </a>
+      </div>
     </div>
   );
 }

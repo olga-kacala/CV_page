@@ -77,28 +77,32 @@ p {
   animation: writeText 20s linear forwards;
 }
 
-.GroupProject {
-  height: 30vh;
+.project {
+  height: auto;
   width: 99vw;
-  background-color: rgb(241, 241, 241);
+  margin: 30px 0;
+  position: relative; 
 }
 
-.IndividualProject {
-  height: 30vh;
-  width: 99vw;
-  background-color: rgb(241, 241, 241);
+.project img {
+  transition: opacity 0.3s;
 }
 
-.PassionProject {
-  height: 30vh;
-  width: 99vw;
-  background-color: rgb(241, 241, 241);
+.project:hover img {
+  opacity: 0.3;
 }
 
-.otherProject {
-  height: 30vh;
-  width: 99vw;
-  background-color: rgb(241, 241, 241);
+.project:hover::after {
+  content: 'Your Text Here';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  opacity: 1;
 }
 
 @keyframes writeText {
