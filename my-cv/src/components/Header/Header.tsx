@@ -82,14 +82,14 @@ export function Header() {
             />
           </a>
 
-          <img
+          <a href="/Img/OLGA_KACALA_CV.pdf" download="OLGA_KACALA_CV.pdf">
+            <img
               className={classes.Logo}
               title="CV"
               alt="CV download"
               src={process.env.PUBLIC_URL + "/Img/download.png"}
             />
-
-          
+          </a>
         </div>
 
         <div className={classes.coverContainer}></div>
@@ -100,12 +100,15 @@ export function Header() {
           width: coverContainerState.coverClicked ? "100vw" : "60vw",
           display: coverContainerState.coverClicked ? "flex" : "block",
           lineHeight: coverContainerState.coverClicked ? "2.5" : "1.0",
-          alignItems: coverContainerState.coverClicked ? "center" : "center",
         }}
       >
         <h1>Hi</h1>
         <div className={classes.profile}>
-        With a diverse professional background, I offer a unique combination of technical expertise and managerial skills. Having pursued postgraduate studies in Computer Science at the University of Science and Technology in Krakow, I have specialized in the design, programming, and operation of systems
+          With a diverse professional background, I offer a unique combination
+          of technical expertise and managerial skills. Having pursued
+          postgraduate studies in Computer Science at the University of Science
+          and Technology in Krakow, I have specialized in the design,
+          programming, and operation of systems
         </div>
       </div>
     </div>

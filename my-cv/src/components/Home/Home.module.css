@@ -80,12 +80,18 @@ p {
 .project {
   height: auto;
   width: 99vw;
-  margin: 30px 0;
+  margin: 60px 0;
   position: relative; 
 }
 
 .project img {
   transition: opacity 0.3s;
+  height: 50vh;
+}
+
+a {
+  display: flex;
+  justify-content: center;
 }
 
 .project:hover img {
@@ -93,16 +99,17 @@ p {
 }
 
 .project:hover::after {
-  content: 'Your Text Here';
+  content: attr(data-hover-text);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: #333;
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
   opacity: 1;
+  letter-spacing: 2px;
 }
 
 @keyframes writeText {

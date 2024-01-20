@@ -50,6 +50,7 @@ h1,
   height: auto;
   color: white;
   padding: 2vh;
+  align-items: center;
 }
 
 .profile {

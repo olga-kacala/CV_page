@@ -262,7 +262,8 @@ export function Home() {
 
       <h2>My Projects</h2>
 
-      <div className={classes.project}>
+      <div className={classes.project}
+      data-hover-text="PANDOTEKA - Group Project">
         <a
           href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
           target="_blank"
@@ -275,7 +276,8 @@ export function Home() {
           />
         </a>
       </div>
-      <div className={classes.project}>
+      <div className={classes.project}
+      data-hover-text="KRAKOW COURSES - Commercial Project">
         <a
           href="https://olga-kacala.github.io/turystyka-kursy/"
           target="_blank"
@@ -289,7 +291,9 @@ export function Home() {
         </a>
       </div>
       
-      <div className={classes.project}>
+      <div className={classes.project}
+       data-hover-text="WALKIE - Passion Project"
+      >
         <a
           href="https://olga-kacala.github.io/turystyka-kursy/"
           target="_blank"
