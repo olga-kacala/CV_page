@@ -47,22 +47,22 @@ p {
 
 .education {
   background-color: rgb(142, 184, 134);
-  color: #333;
+  color: rgb(46, 47, 47);
 }
 
 .experience {
-  background-color: #333;
+  background-color: rgb(46, 47, 47);
   color: white;
 }
 
 .education:hover,
 .experience:hover {
   background-color: rgb(241, 241, 241);
-  color: #333;
+  color: rgb(46, 47, 47);
 }
 
 .projectsText {
-  background-color: #333;
+  background-color: rgb(142, 184, 134);
   color: white;
   letter-spacing: 2px;
   animation-play-state: paused;
@@ -78,10 +78,17 @@ p {
 }
 
 .project {
+  flex-direction: row;
   height: auto;
   width: 99vw;
-  margin: 60px 0;
-  position: relative; 
+  margin-bottom: 60px;
+  position: relative;
+  background-color: #6c6c6c;
+}
+
+.box {
+  display: flex;
+  justify-content: end;
 }
 
 .project img {
@@ -89,27 +96,59 @@ p {
   height: 50vh;
 }
 
-a {
+.project a {
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 
 .project:hover img {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .project:hover::after {
   content: attr(data-hover-text);
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #333;
+  color: black;
   font-size: 1.5em;
-  font-weight: bold;
   text-align: center;
   opacity: 1;
   letter-spacing: 2px;
+}
+
+.projectDescription {
+  margin: 20px;
+  padding: 20px;
+  width: 20vw;
+  height: 100%;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+
+.myTechnologyContainer {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+}
+
+.basicTechnology {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mainTechnology img {
+  max-height: 20vh;
+  margin: 10px;
+}
+
+.basicTechnology img {
+  max-height: 8vh;
+  margin: 10px;
 }
 
 @keyframes writeText {

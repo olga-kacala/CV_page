@@ -262,49 +262,146 @@ export function Home() {
 
       <h2>My Projects</h2>
 
-      <div className={classes.project}
-      data-hover-text="PANDOTEKA - Group Project">
-        <a
-          href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            title="Pandoteka"
-            alt="Pandoteka"
-            src={process.env.PUBLIC_URL + "/Img/Pandoteka.png"}
-          />
-        </a>
-      </div>
-      <div className={classes.project}
-      data-hover-text="KRAKOW COURSES - Commercial Project">
-        <a
-          href="https://olga-kacala.github.io/turystyka-kursy/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            title="Krakow Courses"
-            alt="Krakow Courses"
-            src={process.env.PUBLIC_URL + "/Img/KrakowCourses.png"}
-          />
-        </a>
-      </div>
-      
-      <div className={classes.project}
-       data-hover-text="WALKIE - Passion Project"
+      <div
+        className={classes.project}
+        data-hover-text="PANDOTEKA - Group Project"
       >
-        <a
-          href="https://olga-kacala.github.io/turystyka-kursy/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className={classes.box}>
+          <a
+            href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              title="Pandoteka"
+              alt="Pandoteka"
+              src={process.env.PUBLIC_URL + "/Img/Pandoteka.png"}
+            />
+          </a>
+          <div className={classes.projectDescription}>
+            Introducing Pandoteka, the universe's cutest book search app! 📚
+            Pandoteka is your go-to book database, enabling users to search,
+            view book details, add to wishlists, and explore purchase options.
+            For logged-in members, it offers wishlists, comments, and a unique
+            panda rating system. Technology Stack: React (with React Router and
+            CSS Modules), TypeScript, CSS3, HTML5, Firebase, Cypress, Jest,
+            Adobe XD. May the panda be with you 🐼
+          </div>
+        </div>
+      </div>
+      <div
+        className={classes.project}
+        data-hover-text="KRAKOW COURSES - Commercial Project"
+      >
+        <div className={classes.box}>
+          <a
+            href="https://olga-kacala.github.io/turystyka-kursy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              title="Krakow Courses"
+              alt="Krakow Courses"
+              src={process.env.PUBLIC_URL + "/Img/KrakowCourses.png"}
+            />
+          </a>
+          <div className={classes.projectDescription}>
+            Introducing Pandoteka, the universe's cutest book search app! 📚
+            Pandoteka is your go-to book database, enabling users to search,
+            view book details, add to wishlists, and explore purchase options.
+            For logged-in members, it offers wishlists, comments, and a unique
+            panda rating system. Technology Stack: React (with React Router and
+            CSS Modules), TypeScript, CSS3, HTML5, Firebase, Cypress, Jest,
+            Adobe XD. May the panda be with you 🐼
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={classes.project}
+        data-hover-text="WALKIE - Passion Project"
+      >
+        <div className={classes.box}>
+          <a
+            href="https://olga-kacala.github.io/turystyka-kursy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              title="Walkie"
+              alt="Walkie"
+              src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
+            />
+          </a>
+          <div className={classes.projectDescription}>
+            Welcome to Walkie! 🐾 Unleash the fun with our app, connecting pet
+            owners for paws-itively delightful walks. Manage your pet squad with
+            ease—add details like names, ages, breeds, and more. Spice up their
+            profiles with cute photos. Check the weather, grab the leash, and
+            have a 'paw-some' time with your furry friends! 🐶🚶‍♂️ #WalkieTime"
+          </div>
+        </div>
+      </div>
+
+      <h2>My Technology</h2>
+      <div className={classes.myTechnologyContainer}>
+        <div className={classes.mainTechnology}>
           <img
-            title="Walkie"
-            alt="Walkie"
-            src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
+            title="React"
+            alt="React icon"
+            src={process.env.PUBLIC_URL + "/Img/React-icon.png"}
           />
-        </a>
+          <img
+            title="HTML5"
+            alt="HTML5 icon"
+            src={process.env.PUBLIC_URL + "/Img/HTML5.png"}
+          />
+          <img
+            title="CSS3"
+            alt="CSS3 icon"
+            src={process.env.PUBLIC_URL + "/Img/CSS3.png"}
+          />
+          <img
+            title="JavaScript"
+            alt="JavaScript icon"
+            src={process.env.PUBLIC_URL + "/Img/Javascript.png"}
+          />
+          <img
+            title="Firebase"
+            alt="Firebase icon"
+            src={process.env.PUBLIC_URL + "/Img/firebase.png"}
+          />
+          <img
+            title="Linux"
+            alt="Linux icon"
+            src={process.env.PUBLIC_URL + "/Img/Linux.png"}
+          />
+          <img
+            title="Visual Studio Code"
+            alt="Visual Studio Code icon"
+            src={process.env.PUBLIC_URL + "/Img/Visual_Studio.png"}
+          />
+
+          <div className={classes.basicTechnology}>
+            <img
+              title="SQL"
+              alt="SQL icon"
+              src={process.env.PUBLIC_URL + "/Img/Sql.png"}
+            />
+
+            <img
+              title="java"
+              alt="java icon"
+              src={process.env.PUBLIC_URL + "/Img/java.png"}
+            />
+
+            <img
+              title="python"
+              alt="python icon"
+              src={process.env.PUBLIC_URL + "/Img/Python.png"}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

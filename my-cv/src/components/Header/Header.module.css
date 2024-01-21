@@ -3,7 +3,7 @@
   width: 99vw;
   max-height: 60vh;
   background-color: rgb(142, 184, 134);
-  color: #333;
+  color: rgb(46, 47, 47);
 }
 
 .sliderContainer {
@@ -11,7 +11,7 @@
   flex-direction: row;
   width: 40vw;
   padding: 2vh;
-  background-color: #333;
+  background-color: rgb(46, 47, 47);
   position: relative;
 }
 
@@ -45,7 +45,7 @@ h1,
 }
 
 .profileTextContainer {
-  background-color: #333;
+  background-color: rgb(46, 47, 47);
   width: 60vw;
   height: auto;
   color: white;
