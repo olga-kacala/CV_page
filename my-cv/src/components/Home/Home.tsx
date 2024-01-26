@@ -295,7 +295,7 @@ export function Home() {
       >
         <div className={classes.box}>
           <a
-            href="https://olga-kacala.github.io/turystyka-kursy/"
+            href="https://www.kursy-krakow-krzykalski.pl"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -323,7 +323,7 @@ export function Home() {
       >
         <div className={classes.box}>
           <a
-            href="https://olga-kacala.github.io/turystyka-kursy/"
+            href="https://www.kursy-krakow-krzykalski.pl"
             target="_blank"
             rel="noopener noreferrer"
           >
