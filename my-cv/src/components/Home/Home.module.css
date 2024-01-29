@@ -91,12 +91,17 @@ p {
   justify-content: end;
 }
 
-.project img {
+.projectScreen {
   transition: opacity 0.3s;
   height: 50vh;
 }
 
-.project a {
+.Logo {
+  height: 2vh;
+  padding: 2vh;
+}
+
+.projectLinks {
   display: flex;
   justify-content: center;
   background-color: white;

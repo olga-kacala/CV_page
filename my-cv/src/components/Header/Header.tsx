@@ -38,7 +38,7 @@ export function Header() {
       >
         <img
           className={classes.profileImg}
-          title="My picture"
+          title="That's me"
           alt="Profile picture"
           src={process.env.PUBLIC_URL + "/Img/profiloweGRAY.jpg"}
         />

@@ -21,7 +21,7 @@ export function Footer() {
         </a>
 
         <a
-          href="https://github.com/olga-kacala"
+          href="https://github.com/olga-kacala/CV_page"
           target="_blank"
           rel="noopener noreferrer"
         >
