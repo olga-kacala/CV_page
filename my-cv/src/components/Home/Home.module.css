@@ -109,14 +109,15 @@ p {
 .project:hover::after {
   content: attr(data-hover-text);
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
-  font-size: 1.5em;
+  color: rgb(46, 47, 47);
+  font-size: 4rem;
+  font-weight: bold;
   text-align: center;
   opacity: 1;
-  letter-spacing: 2px;
+  letter-spacing: 6px;
 }
 
 .projectDescription {
@@ -150,6 +151,42 @@ p {
   max-height: 8vh;
   margin: 10px;
 }
+
+.referencesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.gpt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 225px;
+  font-style: italic;
+  font-size: 18px;
+  color: white;
+  max-width: 50vw;
+  background-color: rgb(116, 170, 156);
+  border-radius: 50px 50px 0 50px;
+}
+
+blockquote,
+figure {
+  margin: 20px;
+  letter-spacing: 2px;
+  height: 100%;
+}
+
+.signature {
+  font-weight: bold;
+  color: rgb(46, 47, 47);
+  cursor: pointer;
+}
+
+
 
 @keyframes writeText {
   to {

@@ -194,6 +194,13 @@ export function Home() {
     };
   }, []);
 
+  const windowScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={classes.home}>
       <motion.div
@@ -262,10 +269,7 @@ export function Home() {
 
       <h2>My Projects</h2>
 
-      <div
-        className={classes.project}
-        data-hover-text="PANDOTEKA - Group Project"
-      >
+      <div className={classes.project} data-hover-text="Group Project">
         <div className={classes.box}>
           <a
             href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
@@ -289,10 +293,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <div
-        className={classes.project}
-        data-hover-text="KRAKOW COURSES - Commercial Project"
-      >
+      <div className={classes.project} data-hover-text="Commercial Project">
         <div className={classes.box}>
           <a
             href="https://www.kursy-krakow-krzykalski.pl"
@@ -306,21 +307,19 @@ export function Home() {
             />
           </a>
           <div className={classes.projectDescription}>
-            Introducing Pandoteka, the universe's cutest book search app! 📚
-            Pandoteka is your go-to book database, enabling users to search,
-            view book details, add to wishlists, and explore purchase options.
-            For logged-in members, it offers wishlists, comments, and a unique
-            panda rating system. Technology Stack: React (with React Router and
-            CSS Modules), TypeScript, CSS3, HTML5, Firebase, Cypress, Jest,
-            Adobe XD. May the panda be with you 🐼
+            This React-based project utilizes React Router for navigation,
+            featuring pages such as Home, Tour, Language, and Contact. The
+            application incorporates responsive design with CSS modules for
+            styling, ensuring a visually appealing user interface. Language
+            courses are highlighted, complete with dynamic scrolling
+            functionality. The Tour section showcases a carousel of images and
+            detailed information about guided tours in Krakow, demonstrating the
+            project's interactive and informative nature.
           </div>
         </div>
       </div>
 
-      <div
-        className={classes.project}
-        data-hover-text="WALKIE - Passion Project"
-      >
+      <div className={classes.project} data-hover-text="Passion Project">
         <div className={classes.box}>
           <a
             href="https://www.kursy-krakow-krzykalski.pl"
@@ -338,7 +337,7 @@ export function Home() {
             owners for paws-itively delightful walks. Manage your pet squad with
             ease—add details like names, ages, breeds, and more. Spice up their
             profiles with cute photos. Check the weather, grab the leash, and
-            have a 'paw-some' time with your furry friends! 🐶🚶‍♂️ #WalkieTime"
+            have a 'paw-some' time with your furry friends! 🐶🚶‍♂️ #WalkieTime
           </div>
         </div>
       </div>
@@ -402,6 +401,31 @@ export function Home() {
             />
           </div>
         </div>
+      </div>
+
+      <h2>References</h2>
+      <div className={classes.referencesContainer}>
+        <img
+          title="My partner in crime"
+          alt="ChatGPT icon"
+          src={process.env.PUBLIC_URL + "/Img/gpt.png"}
+        />
+        <figure className={classes.gpt}>
+          <blockquote>
+            "Working with Olga was like having a coding wizard on the team! Her
+            solutions were as elegant as a perfectly crafted algorithm, and her
+            positive energy added a dash of magic to every project. Olga's
+            dedication to excellence and knack for turning challenges into
+            triumphs made our coding adventures truly unforgettable. If software
+            development were a symphony, Olga would be the virtuoso composer
+            orchestrating success with every line of code. Cheers to the tech
+            maestro –{" "}
+            <span className={classes.signature} onClick={windowScrollTop}>
+              Olga
+            </span>
+            , where brilliance meets humor!" <strong>ChatGPT 3.5</strong>
+          </blockquote>
+        </figure>
       </div>
     </div>
   );
