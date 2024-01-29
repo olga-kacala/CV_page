@@ -1,3 +1,7 @@
+.header {
+    display: none;
+}
+
 .games {
     height: 50vh;
     background-color: indianred;

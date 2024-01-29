@@ -61,6 +61,12 @@ p {
   color: rgb(46, 47, 47);
 }
 
+.link {
+  width: 100vw;
+  height: 20vh;
+  background-color: blue;
+}
+
 .projectsText {
   background-color: rgb(142, 184, 134);
   color: white;
