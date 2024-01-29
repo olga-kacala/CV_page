@@ -97,6 +97,7 @@ p {
 }
 
 .Logo {
+  display: flex;
   height: 2vh;
   padding: 2vh;
 }
@@ -178,12 +179,9 @@ p {
   border-radius: 50px 50px 0 50px;
 }
 
-blockquote,
-figure {
-  margin: 20px;
-  letter-spacing: 2px;
-  height: 100%;
-}
+.gptText {
+ padding: 0 2vw;
+} 
 
 .signature {
   font-weight: bold;
@@ -191,8 +189,46 @@ figure {
   cursor: pointer;
 }
 
+.loading {
+  color: #6c6c6c;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin: 4vh;
+}
+
+.loadingAnime {
+  display: inline-block;
+}
 
 
+.dot {
+  opacity: 0;
+  display: inline-block;
+  margin-left: 2px; 
+}
+
+.dot1 {
+  animation: dotAnimation 2s 0.3s infinite;
+}
+
+.dot2 {
+  animation: dotAnimation 2s 0.6s infinite;
+}
+
+.dot3 {
+  animation: dotAnimation 2s 0.9s infinite;
+}
+
+@keyframes dotAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 @keyframes writeText {
   to {
     width: 100%;

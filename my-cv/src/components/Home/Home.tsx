@@ -270,17 +270,15 @@ export function Home() {
       <h2>My Projects</h2>
 
       <div className={classes.project} data-hover-text="Group Project">
-        
         <div className={classes.box}>
-          
           <a
-          className={classes.projectLinks}
+            className={classes.projectLinks}
             href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-            className={classes.projectScreen}
+              className={classes.projectScreen}
               title="Pandoteka"
               alt="Pandoteka"
               src={process.env.PUBLIC_URL + "/Img/Pandoteka.png"}
@@ -295,31 +293,30 @@ export function Home() {
             CSS Modules), TypeScript, CSS3, HTML5, Firebase, Cypress, Jest,
             Adobe XD. May the panda be with you 🐼
             <a
-            href="https://github.com/olga-kacala/Pandoteka"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className={classes.Logo}
-              title="GH"
-              alt="GitHub"
-              src={process.env.PUBLIC_URL + "/Img/github-logo.webp"}
-            />
-          </a>
+              href="https://github.com/olga-kacala/Pandoteka"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className={classes.Logo}
+                title="GH"
+                alt="GitHub"
+                src={process.env.PUBLIC_URL + "/Img/github-logo.webp"}
+              />
+            </a>
           </div>
-          
         </div>
       </div>
       <div className={classes.project} data-hover-text="Commercial Project">
         <div className={classes.box}>
           <a
-           className={classes.projectLinks}
+            className={classes.projectLinks}
             href="https://www.kursy-krakow-krzykalski.pl"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-            className={classes.projectScreen}
+              className={classes.projectScreen}
               title="Krakow Courses"
               alt="Krakow Courses"
               src={process.env.PUBLIC_URL + "/Img/KrakowCourses.png"}
@@ -341,13 +338,13 @@ export function Home() {
       <div className={classes.project} data-hover-text="Passion Project">
         <div className={classes.box}>
           <a
-           className={classes.projectLinks}
+            className={classes.projectLinks}
             href="https://www.kursy-krakow-krzykalski.pl"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-            className={classes.projectScreen}
+              className={classes.projectScreen}
               title="Walkie"
               alt="Walkie"
               src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
@@ -359,18 +356,18 @@ export function Home() {
             ease—add details like names, ages, breeds, and more. Spice up their
             profiles with cute photos. Check the weather, grab the leash, and
             have a 'paw-some' time with your furry friends! 🐶🚶‍♂️ #WalkieTime
-             <a
-            href="https://github.com/olga-kacala/Go-for-a-walkie"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className={classes.Logo}
-              title="GH"
-              alt="GitHub"
-              src={process.env.PUBLIC_URL + "/Img/github-logo.webp"}
-            />
-          </a>
+            <a
+              href="https://github.com/olga-kacala/Go-for-a-walkie"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className={classes.Logo}
+                title="GH"
+                alt="GitHub"
+                src={process.env.PUBLIC_URL + "/Img/github-logo.webp"}
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -444,7 +441,7 @@ export function Home() {
           src={process.env.PUBLIC_URL + "/Img/gpt.png"}
         />
         <figure className={classes.gpt}>
-          <blockquote>
+          <div className={classes.gptText}>
             "Working with Olga was like having a coding wizard on the team! Her
             solutions were as elegant as a perfectly crafted algorithm, and her
             positive energy added a dash of magic to every project. Olga's
@@ -457,9 +454,16 @@ export function Home() {
               Olga
             </span>
             , where brilliance meets humor!" <strong>ChatGPT 3.5</strong>
-          </blockquote>
+          </div>
         </figure>
       </div>
+      <div className={classes.loading}>
+  Loading
+  <span className={`${classes.loadingAnime} ${classes.dot} ${classes.dot1}`}>.</span>
+  <span className={`${classes.loadingAnime} ${classes.dot} ${classes.dot2}`}>.</span>
+  <span className={`${classes.loadingAnime} ${classes.dot} ${classes.dot3}`}>.</span>
+</div>
+
     </div>
   );
 }
