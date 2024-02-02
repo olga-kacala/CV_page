@@ -259,6 +259,7 @@ export function Home() {
       </motion.div>
 
       <Animation />
+      <Link to={'/Games'}>games</Link>
 
       <div
         className={`${classes.projectsText} ${
@@ -275,7 +276,7 @@ export function Home() {
         <div className={classes.box}>
         <img
               className={classes.projectQR}
-              title="QR code"
+              title="Scan me"
               alt="QR code"
               src={process.env.PUBLIC_URL + "/Img/qrPandoteka.png"}
             />
@@ -319,7 +320,7 @@ export function Home() {
         <div className={classes.box}>
         <img
               className={classes.projectQR}
-              title="QR code"
+              title="Scan me"
               alt="QR code"
               src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
             />
@@ -353,7 +354,7 @@ export function Home() {
         <div className={classes.box}>
         <img
               className={classes.projectQR}
-              title="QR code"
+              title="Scan me"
               alt="QR code"
               src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
             />
@@ -370,12 +371,13 @@ export function Home() {
               src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
             />
           </a>
+          
           <div className={classes.projectDescription}>
-            Welcome to Walkie! 🐾 Unleash the fun with our app, connecting pet
+          🚧🚧!UNDER CONSTRUCTION!🚧🚧<br/> Welcome to Walkie! 🐾 Unleash the fun with our app, connecting pet
             owners for paws-itively delightful walks. Manage your pet squad with
             ease—add details like names, ages, breeds, and more. Spice up their
             profiles with cute photos. Check the weather, grab the leash, and
-            have a 'paw-some' time with your furry friends! 🐶🚶‍♂️ #WalkieTime
+            have a 'paw-some' time with your furry friends! 🐶
             <a
               href="https://github.com/olga-kacala/Go-for-a-walkie"
               target="_blank"

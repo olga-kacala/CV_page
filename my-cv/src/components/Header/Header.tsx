@@ -1,14 +1,19 @@
 import classes from "./Header.module.css";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-interface CoverContainerState {
+type CoverContainerState = {
   translateX: number;
   opacity: number;
   coverClicked: boolean;
   transition: string;
 }
 
-export function Header() {
+export function Header():JSX.Element {
+
+  const location = useLocation();
+
   const [coverContainerState, setCoverContainerState] =
     useState<CoverContainerState>({
       translateX: 0,
@@ -17,6 +22,8 @@ export function Header() {
       transition: "transform 1.1s ease, opacity 1.1s ease",
     });
 
+    const [showQRCode, setShowQRCode] = useState(true);
+
   const handleCoverContainerClick = () => {
     setCoverContainerState((prevState) => ({
       ...prevState,
@@ -24,9 +31,13 @@ export function Header() {
       opacity: prevState.coverClicked ? 1 : 0.09,
       coverClicked: !prevState.coverClicked,
     }));
+  
+    
+    setShowQRCode((prevShowQRCode) => !prevShowQRCode);
+
   };
-  return (
-    <div className={classes.header} onClick={handleCoverContainerClick}>
+  return location.pathname !== "/Games" ? (
+      <div className={classes.header} onClick={handleCoverContainerClick}>
       <div
         className={classes.sliderContainer}
         style={{
@@ -100,6 +111,7 @@ export function Header() {
           width: coverContainerState.coverClicked ? "100vw" : "60vw",
          alignItems: coverContainerState.coverClicked ? "center" : "flex-start",
           lineHeight: coverContainerState.coverClicked ? "2.5" : "1.0",
+          
         }}
       >
         <h1>Hi</h1>
@@ -110,13 +122,17 @@ export function Header() {
           and Technology in Krakow, I have specialized in the design,
           programming, and operation of systems
         </div>
-        <img
-              className={classes.QR}
-              title="QR code"
-              alt="QR code"
-              src={process.env.PUBLIC_URL + "/Img/qrCVpage.png"}
-            />
+        {showQRCode && (
+          <img
+            className={classes.QR}
+            title="Scan me"
+            alt="QR code"
+            src={process.env.PUBLIC_URL + "/Img/qrCVpage.png"}
+          />
+        )}
       </div>
     </div>
-  );
-}
+    ): (
+      <Link to={"/"}>Go back</Link>
+    )}
+
