@@ -98,7 +98,7 @@ export function Header() {
         className={classes.profileTextContainer}
         style={{
           width: coverContainerState.coverClicked ? "100vw" : "60vw",
-          display: coverContainerState.coverClicked ? "flex" : "block",
+         alignItems: coverContainerState.coverClicked ? "center" : "flex-start",
           lineHeight: coverContainerState.coverClicked ? "2.5" : "1.0",
         }}
       >
@@ -110,6 +110,12 @@ export function Header() {
           and Technology in Krakow, I have specialized in the design,
           programming, and operation of systems
         </div>
+        <img
+              className={classes.QR}
+              title="QR code"
+              alt="QR code"
+              src={process.env.PUBLIC_URL + "/Img/qrCVpage.png"}
+            />
       </div>
     </div>
   );

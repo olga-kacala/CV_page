@@ -259,7 +259,6 @@ export function Home() {
       </motion.div>
 
       <Animation />
-      <Link className={classes.link}to="/Games">games</Link>
 
       <div
         className={`${classes.projectsText} ${
@@ -274,6 +273,12 @@ export function Home() {
 
       <div className={classes.project} data-hover-text="Group Project">
         <div className={classes.box}>
+        <img
+              className={classes.projectQR}
+              title="QR code"
+              alt="QR code"
+              src={process.env.PUBLIC_URL + "/Img/qrPandoteka.png"}
+            />
           <a
             className={classes.projectLinks}
             href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
@@ -312,6 +317,12 @@ export function Home() {
       </div>
       <div className={classes.project} data-hover-text="Commercial Project">
         <div className={classes.box}>
+        <img
+              className={classes.projectQR}
+              title="QR code"
+              alt="QR code"
+              src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
+            />
           <a
             className={classes.projectLinks}
             href="https://www.kursy-krakow-krzykalski.pl"
@@ -340,6 +351,12 @@ export function Home() {
 
       <div className={classes.project} data-hover-text="Passion Project">
         <div className={classes.box}>
+        <img
+              className={classes.projectQR}
+              title="QR code"
+              alt="QR code"
+              src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
+            />
           <a
             className={classes.projectLinks}
             href="https://www.kursy-krakow-krzykalski.pl"

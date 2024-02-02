@@ -41,16 +41,19 @@
 h1,
 .name {
   padding: 2vh;
-  width: 20vw;
+  text-align: left;
 }
 
 .profileTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
   background-color: rgb(46, 47, 47);
   width: 60vw;
   height: auto;
   color: white;
   padding: 2vh;
-  align-items: center;
+  align-items:flex-start;
 }
 
 .profile {
@@ -59,4 +62,10 @@ h1,
   font-size: larger;
   padding: 2vh;
   line-height: 30px;
+}
+
+.QR {
+  width: 100px;
+  justify-content: end;
+  padding: 2vh;
 }
