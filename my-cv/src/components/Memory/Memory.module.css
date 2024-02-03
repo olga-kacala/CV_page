@@ -1,0 +1,29 @@
+.memory {
+    max-width: 860px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .cardGrid {
+    justify-content: center;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  @media screen and (max-width: 750px) {
+  .memory {
+    margin: 0px 6px;
+  }
+    .cardGrid {
+      justify-content: center;
+      margin: 0px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3px;
+    }
+
+  }

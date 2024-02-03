@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  width: 99vw;
+  width: 100vw;
   max-height: 60vh;
   background-color: rgb(142, 184, 134);
   color: rgb(46, 47, 47);
@@ -68,4 +68,9 @@ h1,
   width: 100px;
   justify-content: end;
   padding: 2vh;
+}
+
+.sloth {
+  height: 9vh;
+  border-radius: 50%;
 }

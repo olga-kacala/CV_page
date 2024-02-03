@@ -1,5 +1,35 @@
+.gameContainer {
+  font-size: 1.7em;
+  text-align: center;
+  background-color: rgb(46, 47, 47);
+  color: #fff;
+  height: 80vh;
+}
 
-.games {
-    height: 50vh;
-    background-color: indianred;
+.inviteBox {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.inviteBox h2 {
+    width: 50vw;
+}
+
+
+.imageContainer img {
+  height: 20vh;
+  border-radius: 4px;
+  margin: 2vh;
+}
+
+.imageContainer > img:hover,
+.imageContainer > a:hover {
+  transform: scale(1.1);
+}
+
+.hello {
+  font-weight: bold;
+  color: #66fcf1;
+  font-size: 7rem;
 }

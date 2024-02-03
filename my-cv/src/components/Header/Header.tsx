@@ -1,7 +1,6 @@
 import classes from "./Header.module.css";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type CoverContainerState = {
   translateX: number;
@@ -13,6 +12,7 @@ type CoverContainerState = {
 export function Header():JSX.Element {
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   const [coverContainerState, setCoverContainerState] =
     useState<CoverContainerState>({
@@ -36,7 +36,7 @@ export function Header():JSX.Element {
     setShowQRCode((prevShowQRCode) => !prevShowQRCode);
 
   };
-  return location.pathname !== "/Games" ? (
+  return location.pathname !== "/Games" && location.pathname !== "/Memory" ? (
       <div className={classes.header} onClick={handleCoverContainerClick}>
       <div
         className={classes.sliderContainer}
@@ -133,6 +133,16 @@ export function Header():JSX.Element {
       </div>
     </div>
     ): (
-      <Link to={"/"}>Go back</Link>
+      <div style={{
+        height:'10vh',
+        backgroundColor:'rgb(46, 47, 47)',
+      }}><img
+      className={classes.sloth}
+      title="Go back"
+      alt="Logo"
+      src={process.env.PUBLIC_URL + "/Img/logo.png"}
+      onClick={() => navigate("/")}
+    /></div>
+      
     )}
 
