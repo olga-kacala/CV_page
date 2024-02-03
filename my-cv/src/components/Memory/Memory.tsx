@@ -71,7 +71,7 @@ export const Memory = (): JSX.Element => {
 
   return (
     <div className={classes.memory}>
-      <h1>Memory Match</h1>
+      <div className={classes.memoryTitle}>Memory Match</div>
       <h2>Turns:{turns}</h2>
       <div className={classes.cardGrid}>
         {cards.map((card) => (

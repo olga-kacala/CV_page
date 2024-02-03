@@ -1,8 +1,10 @@
 .card {
   position: relative;
+  background-color: rgb(46, 47, 47);
 }
 
-.front, .back {
+.front,
+.back {
   width: 100%;
   display: block;
   border: 2px solid white;
@@ -13,8 +15,7 @@
   transform: rotateY(90deg);
   position: absolute;
   border: 2px solid white;
-  width: 200px;
-  height: 200px;
+  width: 12vw;
 }
 
 .flipped .front {
@@ -25,9 +26,8 @@
 .card .back {
   transition: all ease-in 0.2s;
   transition-delay: 0.2s;
-  border: 2px solid #558B83;;
-  width: 200px;
-  height: 200px;
+  border: 2px solid #558b83;
+  width: 12vw;
 }
 
 .flipped .back {
@@ -35,23 +35,22 @@
   transition-delay: 0s;
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width: 750px) {
   .card {
     display: flex;
     justify-content: center;
-   margin: 0px;
+    margin: 0px;
   }
 
   .front {
-    width:100px;
+    width: 100px;
     height: 100px;
     margin: 3px;
   }
 
   .card .back {
-    width:100px;
+    width: 100px;
     height: 100px;
     margin: 3px;
   }
-
 }

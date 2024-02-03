@@ -1,17 +1,17 @@
 .home {
   height: auto;
-  width: 100vw;
+  /* width: 100vw; */
   color: rgb(22, 21, 21);
   scroll-behavior: smooth;
 }
 
-h2 {
+.home h2 {
   padding: 40px;
   width: 20vw;
   letter-spacing: 4px;
 }
 
-h3 {
+.home h3 {
   letter-spacing: 2px;
 }
 

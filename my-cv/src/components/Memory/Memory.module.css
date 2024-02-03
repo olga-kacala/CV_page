@@ -1,29 +1,40 @@
 .memory {
-    max-width: 860px;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .cardGrid {
-    justify-content: center;
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-  }
+  width: 100vw;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: rgb(46, 47, 47);
+}
 
-  @media screen and (max-width: 750px) {
+.memoryTitle {
+  font-weight: bold;
+  color: #66fcf1;
+  font-size: 4rem;
+}
+
+.memory h2 {
+  color: white;
+}
+
+.cardGrid {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2vw;
+}
+
+@media screen and (max-width: 750px) {
   .memory {
     margin: 0px 6px;
   }
-    .cardGrid {
-      justify-content: center;
-      margin: 0px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 3px;
-    }
-
+  .cardGrid {
+    justify-content: center;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3px;
   }
+}

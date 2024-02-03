@@ -18,9 +18,9 @@
 
 
 .imageContainer img {
-  height: 20vh;
-  border-radius: 4px;
-  margin: 2vh;
+  width: 18vw;
+  border-radius: 6px;
+  margin: 5vh 2vh 0 2vh;
 }
 
 .imageContainer > img:hover,
