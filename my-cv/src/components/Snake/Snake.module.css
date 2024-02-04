@@ -1,0 +1,37 @@
+.snakeContainer {
+  width: 100vw;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: rgb(46, 47, 47);
+}
+
+.Snake {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+  align-items: center;
+  outline: none;
+  flex-direction: column;
+  background-color: rgb(46, 47, 47);
+  color: white;
+}
+
+.snakeTitle {
+  font-weight: bold;
+  color: #66fcf1;
+  font-size: 4rem;
+}
+
+.snakeContainer h2 {
+  color: white;
+}
+
+@media screen and (max-width: 750px) {
+  .Snake {
+    height: 400px;
+  }
+}

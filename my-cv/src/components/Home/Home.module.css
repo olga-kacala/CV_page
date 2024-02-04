@@ -1,6 +1,5 @@
 .home {
   height: auto;
-  /* width: 100vw; */
   color: rgb(22, 21, 21);
   scroll-behavior: smooth;
 }
@@ -94,7 +93,7 @@ p {
 
 .box {
   display: flex;
-justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 }
 

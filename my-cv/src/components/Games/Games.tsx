@@ -21,7 +21,7 @@ export function Games() {
         <img
           title="Let's play snake"
           alt="Snake"
-          src={process.env.PUBLIC_URL + "/Img/snake.png"}
+          src={process.env.PUBLIC_URL + "/Img/snake.jpeg"}
           onClick={() => navigate("/Snake")}
         />
       </div>

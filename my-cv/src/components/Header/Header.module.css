@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  /* width: 100vw; */
   max-height: 60vh;
   background-color: rgb(142, 184, 134);
   color: rgb(46, 47, 47);
@@ -70,7 +69,12 @@ h1,
   padding: 2vh;
 }
 
-.sloth {
+.circleNav {
   height: 9vh;
   border-radius: 50%;
+  transition: transform 1s ease-in-out;
+}
+
+.circleNav:hover {
+  transform: rotate(30deg);
 }

@@ -36,7 +36,7 @@ export function Header():JSX.Element {
     setShowQRCode((prevShowQRCode) => !prevShowQRCode);
 
   };
-  return location.pathname !== "/Games" && location.pathname !== "/Memory" ? (
+  return location.pathname !== "/Games" && location.pathname !== "/Memory" && location.pathname !== "/Snake" ? (
       <div className={classes.header} onClick={handleCoverContainerClick}>
       <div
         className={classes.sliderContainer}
@@ -137,11 +137,32 @@ export function Header():JSX.Element {
         height:'10vh',
         backgroundColor:'rgb(46, 47, 47)',
       }}><img
-      className={classes.sloth}
-      title="Go back"
+      className={classes.circleNav}
+      title="Go to CV"
       alt="Logo"
       src={process.env.PUBLIC_URL + "/Img/logo.png"}
       onClick={() => navigate("/")}
+    />
+    <img
+      className={classes.circleNav}
+      title="Go to Games"
+      alt="Logo"
+      src={process.env.PUBLIC_URL + "/Img/joystick.webp"}
+      onClick={() => navigate("/Games")}
+    />
+    <img
+      className={classes.circleNav}
+      title="Go to Memory"
+      alt="Logo"
+      src={process.env.PUBLIC_URL + "/Img/cover.png"}
+      onClick={() => navigate("/Memory")}
+    />
+    <img
+      className={classes.circleNav}
+      title="Go to Snake"
+      alt="Logo"
+      src={process.env.PUBLIC_URL + "/Img/snake.jpeg"}
+      onClick={() => navigate("/Snake")}
     /></div>
       
     )}
