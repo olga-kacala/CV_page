@@ -30,6 +30,10 @@
   color: white;
 }
 
+.congratsMessage {
+  color: #66fcf1;
+}
+
 @media screen and (max-width: 750px) {
   .Snake {
     height: 400px;

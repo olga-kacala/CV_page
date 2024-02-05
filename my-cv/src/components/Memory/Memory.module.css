@@ -26,6 +26,10 @@
   grid-gap: 2vw;
 }
 
+.congratsMessage {
+  color: #66fcf1;
+}
+
 @media screen and (max-width: 750px) {
   .memory {
     margin: 0px 6px;

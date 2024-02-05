@@ -147,10 +147,11 @@ p {
   line-height: 30px;
 }
 
-.myTechnologyContainer {
+.myTechnologyContainer, .myLangContainer {
   display: flex;
   margin-bottom: 20px;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .basicTechnology {
@@ -167,6 +168,23 @@ p {
   max-height: 8vh;
   margin: 10px;
 }
+
+
+.mainLang img {
+height: 12vh;
+ margin: 5px;
+}
+
+.basicLang img {
+  height: 7vh;
+   margin: 5px;
+  }
+
+.polishFlag {
+  border: 1px solid black;
+}
+
+
 
 .referencesContainer {
   display: flex;

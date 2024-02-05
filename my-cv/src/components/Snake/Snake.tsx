@@ -32,6 +32,7 @@ export const Snake: React.FC<GameProps> = ({}) => {
     <div className={classes.snakeContainer}>
       <div className={classes.snakeTitle}>Snake it</div>
       <h2>{`Your score: ${(snakeBody.length - 1) * 10}`}</h2>
+      {gameState === GameState.GAME_OVER && <div className={classes.congratsMessage}>Game over! You finished the game with {(snakeBody.length - 1) * 10} turns!</div>}
       <div
         className={classes.Snake}
         onKeyDown={onKeyDownHandler}
@@ -45,8 +46,7 @@ export const Snake: React.FC<GameProps> = ({}) => {
               setGameState(GameState.RUNNING);
               resetGameState();
             }}
-          >
-            GAME OVER :( <br /> Play Again!
+          >Play Again!
           </button>
         ) : (
           <button

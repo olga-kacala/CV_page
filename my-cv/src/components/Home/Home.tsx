@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import classes from "./Home.module.css";
 import { motion } from "framer-motion";
 import { Animation } from "../Animation/Animation";
-import {Games} from "../Games/Games";
 import { Link } from "react-router-dom";
 
 export function Home() {
@@ -432,6 +431,7 @@ export function Home() {
             alt="Visual Studio Code icon"
             src={process.env.PUBLIC_URL + "/Img/Visual_Studio.png"}
           />
+          
 
           <div className={classes.basicTechnology}>
             <img
@@ -454,6 +454,33 @@ export function Home() {
           </div>
         </div>
       </div>
+      <h2>My languages</h2>
+      <div className={classes.myLangContainer}>
+        <div className={classes.mainLang}>
+        <img
+            title="English language"
+            alt="English language"
+            src={process.env.PUBLIC_URL + "/Img/eng.svg.webp"}
+          /><img
+          title="Polish language"
+          alt="Polish language"
+          src={process.env.PUBLIC_URL + "/Img/pol.png"}
+          className={classes.polishFlag}
+
+        />
+        </div>
+        <div className={classes.basicLang}><img
+          title="Norwegian language"
+          alt="Norwegian language"
+          src={process.env.PUBLIC_URL + "/Img/nor.jpeg"}
+        />
+        <img
+          title="Danish language"
+          alt="Danish language"
+          src={process.env.PUBLIC_URL + "/Img/dk.png"}
+        /></div>
+         
+        </div>
 
       <h2>My References</h2>
       <div className={classes.referencesContainer}>

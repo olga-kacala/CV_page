@@ -23,6 +23,8 @@ export const Memory = (): JSX.Element => {
   const [choiceOne, setChoiceOne] = useState<Card | null>(null);
   const [choiceTwo, setChoiceTwo] = useState<Card | null>(null);
   const [disabled, setDisabled] = useState(false);
+const [gameCompleted, setGameCompleted] = useState(false);
+
 
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -32,7 +34,14 @@ export const Memory = (): JSX.Element => {
     setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
+    setGameCompleted(false);
   };
+
+  useEffect(() => {
+    if (cards.every((card) => card.matched)) {
+      setGameCompleted(true);
+    }
+  }, [cards]);
 
   const handleChoice = (card: Card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
@@ -73,6 +82,7 @@ export const Memory = (): JSX.Element => {
     <div className={classes.memory}>
       <div className={classes.memoryTitle}>Memory Match</div>
       <h2>Turns:{turns}</h2>
+      {gameCompleted && <div className={classes.congratsMessage}>Congratulations! You finished the game in {turns} turns!</div>}
       <div className={classes.cardGrid}>
         {cards.map((card) => (
           <SingleCard
