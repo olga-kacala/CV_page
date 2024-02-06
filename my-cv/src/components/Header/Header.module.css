@@ -78,3 +78,48 @@ h1,
 .circleNav:hover {
   transform: rotate(30deg);
 }
+
+
+
+@media (max-width: 450px) {
+ .header {
+  flex-direction: column;
+  height: 100vh;
+  max-height: none;
+ }
+
+ .profileImg {
+  width: 50vw;
+ }
+
+ .sliderContainer {
+  flex-direction: column;
+  position: absolute;
+  padding: 0;
+  width: 100vw !important;
+  height: 100vh;
+  justify-content:space-evenly;
+ }
+
+ .profileTextContainer {
+  height: 100vh;
+  width: 100vw !important;
+  padding: 0;
+ }
+
+ .contactContainer {
+  width: 100vw;
+ }
+
+ h1, h2 {
+  margin: 0;
+ }
+
+ .QR {
+  display: none;
+ }
+
+}
+
+@media (min-width: 450px) and (max-width: 821px) {
+}

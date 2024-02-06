@@ -258,7 +258,7 @@ export function Home() {
       </motion.div>
 
       <Animation />
-      <Link to={'/Games'}>games</Link>
+      <Link to={"/Games"}>games</Link>
 
       <div
         className={`${classes.projectsText} ${
@@ -273,12 +273,12 @@ export function Home() {
 
       <div className={classes.project} data-hover-text="Group Project">
         <div className={classes.box}>
-        <img
-              className={classes.projectQR}
-              title="Scan me"
-              alt="QR code"
-              src={process.env.PUBLIC_URL + "/Img/qrPandoteka.png"}
-            />
+          <img
+            className={classes.projectQR}
+            title="Scan me"
+            alt="QR code"
+            src={process.env.PUBLIC_URL + "/Img/qrPandoteka.png"}
+          />
           <a
             className={classes.projectLinks}
             href="https://infoshareacademy.github.io/jfddr8-team-pandy-z-kosmosu/"
@@ -317,12 +317,12 @@ export function Home() {
       </div>
       <div className={classes.project} data-hover-text="Commercial Project">
         <div className={classes.box}>
-        <img
-              className={classes.projectQR}
-              title="Scan me"
-              alt="QR code"
-              src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
-            />
+          <img
+            className={classes.projectQR}
+            title="Scan me"
+            alt="QR code"
+            src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
+          />
           <a
             className={classes.projectLinks}
             href="https://www.kursy-krakow-krzykalski.pl"
@@ -351,15 +351,15 @@ export function Home() {
 
       <div className={classes.project} data-hover-text="Passion Project">
         <div className={classes.box}>
-        <img
-              className={classes.projectQR}
-              title="Scan me"
-              alt="QR code"
-              src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
-            />
+          <img
+            className={classes.projectQR}
+            title="Scan me"
+            alt="QR code"
+            src={process.env.PUBLIC_URL + "/Img/qrWalkie.png"}
+          />
           <a
             className={classes.projectLinks}
-            href="https://www.kursy-krakow-krzykalski.pl"
+            href="https://olga-kacala.github.io/Go-for-a-walkie/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -370,13 +370,14 @@ export function Home() {
               src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
             />
           </a>
-          
+
           <div className={classes.projectDescription}>
-          🚧🚧!UNDER CONSTRUCTION!🚧🚧<br/> Welcome to Walkie! 🐾 Unleash the fun with our app, connecting pet
-            owners for paws-itively delightful walks. Manage your pet squad with
-            ease—add details like names, ages, breeds, and more. Spice up their
-            profiles with cute photos. Check the weather, grab the leash, and
-            have a 'paw-some' time with your furry friends! 🐶
+            🚧🚧!UNDER CONSTRUCTION!🚧🚧
+            <br /> Welcome to Walkie! 🐾 Unleash the fun with our app,
+            connecting pet owners for paws-itively delightful walks. Manage your
+            pet squad with ease—add details like names, ages, breeds, and more.
+            Spice up their profiles with cute photos. Check the weather, grab
+            the leash, and have a 'paw-some' time with your furry friends! 🐶
             <a
               href="https://github.com/olga-kacala/Go-for-a-walkie"
               target="_blank"
@@ -431,7 +432,6 @@ export function Home() {
             alt="Visual Studio Code icon"
             src={process.env.PUBLIC_URL + "/Img/Visual_Studio.png"}
           />
-          
 
           <div className={classes.basicTechnology}>
             <img
@@ -457,30 +457,31 @@ export function Home() {
       <h2>My languages</h2>
       <div className={classes.myLangContainer}>
         <div className={classes.mainLang}>
-        <img
+          <img
             title="English language"
             alt="English language"
             src={process.env.PUBLIC_URL + "/Img/eng.svg.webp"}
-          /><img
-          title="Polish language"
-          alt="Polish language"
-          src={process.env.PUBLIC_URL + "/Img/pol.png"}
-          className={classes.polishFlag}
-
-        />
+          />
+          <img
+            title="Polish language"
+            alt="Polish language"
+            src={process.env.PUBLIC_URL + "/Img/pol.png"}
+            className={classes.polishFlag}
+          />
         </div>
-        <div className={classes.basicLang}><img
-          title="Norwegian language"
-          alt="Norwegian language"
-          src={process.env.PUBLIC_URL + "/Img/nor.jpeg"}
-        />
-        <img
-          title="Danish language"
-          alt="Danish language"
-          src={process.env.PUBLIC_URL + "/Img/dk.png"}
-        /></div>
-         
+        <div className={classes.basicLang}>
+          <img
+            title="Norwegian language"
+            alt="Norwegian language"
+            src={process.env.PUBLIC_URL + "/Img/nor.jpeg"}
+          />
+          <img
+            title="Danish language"
+            alt="Danish language"
+            src={process.env.PUBLIC_URL + "/Img/dk.png"}
+          />
         </div>
+      </div>
 
       <h2>My References</h2>
       <div className={classes.referencesContainer}>
@@ -507,12 +508,23 @@ export function Home() {
         </figure>
       </div>
       <div className={classes.loading}>
-  Loading
-  <span className={`${classes.loadingAnime} ${classes.dot} ${classes.dot1}`}>.</span>
-  <span className={`${classes.loadingAnime} ${classes.dot} ${classes.dot2}`}>.</span>
-  <span className={`${classes.loadingAnime} ${classes.dot} ${classes.dot3}`}>.</span>
-</div>
-
+        Loading
+        <span
+          className={`${classes.loadingAnime} ${classes.dot} ${classes.dot1}`}
+        >
+          .
+        </span>
+        <span
+          className={`${classes.loadingAnime} ${classes.dot} ${classes.dot2}`}
+        >
+          .
+        </span>
+        <span
+          className={`${classes.loadingAnime} ${classes.dot} ${classes.dot3}`}
+        >
+          .
+        </span>
+      </div>
     </div>
   );
 }

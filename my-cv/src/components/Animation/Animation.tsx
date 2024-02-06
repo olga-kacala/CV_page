@@ -32,8 +32,12 @@ export const Animation = () => {
        
       }}
       src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF6IncKmzs&#x2F;view?embed" 
+      
     ></iframe>
    
   </div>
 );
 };
+
+
+

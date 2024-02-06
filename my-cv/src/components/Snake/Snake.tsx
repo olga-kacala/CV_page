@@ -32,21 +32,25 @@ export const Snake: React.FC<GameProps> = ({}) => {
     <div className={classes.snakeContainer}>
       <div className={classes.snakeTitle}>Snake it</div>
       <h2>{`Your score: ${(snakeBody.length - 1) * 10}`}</h2>
-      {gameState === GameState.GAME_OVER && <div className={classes.congratsMessage}>Game over! You finished the game with {(snakeBody.length - 1) * 10} turns!</div>}
-      <div
-        className={classes.Snake}
-        onKeyDown={onKeyDownHandler}
-        tabIndex={0}
-      >
+      {gameState === GameState.GAME_OVER && (
+        <div className={classes.congratsMessage}>
+          Game over! You finished the game with {(snakeBody.length - 1) * 10}{" "}
+          turns!
+        </div>
+      )}
+      <div className={classes.Snake} onKeyDown={onKeyDownHandler} tabIndex={0}>
         <Canvas ref={canvasRef} draw={drawGame} />
-        <p><strong>Pro tip</strong>: use <kbd>w,s,a,d</kbd> keys to move</p>
+        <p>
+          <strong>Pro tip</strong>: use <kbd>w,s,a,d</kbd> keys to move
+        </p>
         {gameState === GameState.GAME_OVER ? (
           <button
             onClick={() => {
               setGameState(GameState.RUNNING);
               resetGameState();
             }}
-          >Play Again!
+          >
+            Play Again!
           </button>
         ) : (
           <button

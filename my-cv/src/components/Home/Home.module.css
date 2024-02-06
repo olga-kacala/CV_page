@@ -83,7 +83,6 @@ p {
 }
 
 .project {
-  flex-direction: row;
   height: auto;
   width: 99vw;
   margin-bottom: 60px;
@@ -147,7 +146,8 @@ p {
   line-height: 30px;
 }
 
-.myTechnologyContainer, .myLangContainer {
+.myTechnologyContainer,
+.myLangContainer {
   display: flex;
   margin-bottom: 20px;
   justify-content: space-evenly;
@@ -169,22 +169,21 @@ p {
   margin: 10px;
 }
 
-
 .mainLang img {
-height: 12vh;
- margin: 5px;
+  height: 12vh;
+  margin: 5px;
+  border-radius: 30%;
 }
 
 .basicLang img {
   height: 7vh;
-   margin: 5px;
-  }
-
-.polishFlag {
-  border: 1px solid black;
+  margin: 5px;
+  border-radius: 30%;
 }
 
-
+.polishFlag {
+  border: 0.5px solid grey;
+}
 
 .referencesContainer {
   display: flex;
@@ -262,3 +261,83 @@ height: 12vh;
     width: 100%;
   }
 }
+
+@media (max-width: 450px) {
+ 
+  .home h2 {
+    padding: 2vw;
+    width: 100vw;
+  }
+
+  .education, .timelineItem, .experience {
+    width: 100vw;
+    padding: 2vw;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
+  .projectsText.visible {
+    animation: writeText 10s linear forwards;
+    padding: 2vw;
+    font-size: small;
+  }
+
+  .project {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projectDescription {
+    width: 90vw;
+    padding: 0;
+    margin: 0;
+    font-size: small;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .projectScreen {
+    width: 100vw;
+    height: auto;
+  }
+
+
+.project:hover::after {
+  top: 35%;
+  font-size: medium;
+}
+
+.referencesContainer {
+  width: 100vw;
+  height: auto;
+}
+
+.referencesContainer img {
+  width: 20vw;
+}
+
+.gpt {
+  width: 100vw;
+  height: auto;
+  margin: 2vw;
+  padding: 4vw;
+}
+
+.gptText {
+  width: 90vw;
+  height: auto;
+  font-size: small;
+}
+
+  }
+
+@media (min-width: 450px) and (max-width: 821px) {
+  }
