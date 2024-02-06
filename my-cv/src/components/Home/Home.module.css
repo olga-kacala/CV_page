@@ -297,6 +297,7 @@ p {
     padding: 0;
     margin: 0;
     font-size: small;
+    text-align: center;
   }
 
   .box {
@@ -311,8 +312,19 @@ p {
 
 
 .project:hover::after {
-  top: 35%;
+  top: 20%;
   font-size: medium;
+}
+.projectQR {
+  display: none;
+}
+
+.mainTechnology {
+  justify-content: center;
+}
+
+.mainTechnology img {
+  height: 15vh;
 }
 
 .referencesContainer {
