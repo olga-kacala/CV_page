@@ -7,10 +7,9 @@ type CoverContainerState = {
   opacity: number;
   coverClicked: boolean;
   transition: string;
-}
+};
 
-export function Header():JSX.Element {
-
+export function Header(): JSX.Element {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -22,7 +21,7 @@ export function Header():JSX.Element {
       transition: "transform 1.1s ease, opacity 1.1s ease",
     });
 
-    const [showQRCode, setShowQRCode] = useState(true);
+  const [showQRCode, setShowQRCode] = useState(true);
 
   const handleCoverContainerClick = () => {
     setCoverContainerState((prevState) => ({
@@ -31,13 +30,13 @@ export function Header():JSX.Element {
       opacity: prevState.coverClicked ? 1 : 0.09,
       coverClicked: !prevState.coverClicked,
     }));
-  
-    
-    setShowQRCode((prevShowQRCode) => !prevShowQRCode);
 
+    setShowQRCode((prevShowQRCode) => !prevShowQRCode);
   };
-  return location.pathname !== "/Games" && location.pathname !== "/Memory" && location.pathname !== "/Snake" ? (
-      <div className={classes.header} onClick={handleCoverContainerClick}>
+  return location.pathname !== "/Games" &&
+    location.pathname !== "/Memory" &&
+    location.pathname !== "/Snake" ? (
+    <div className={classes.header} onClick={handleCoverContainerClick}>
       <div
         className={classes.sliderContainer}
         style={{
@@ -109,13 +108,16 @@ export function Header():JSX.Element {
         className={classes.profileTextContainer}
         style={{
           width: coverContainerState.coverClicked ? "100vw" : "60vw",
-         alignItems: coverContainerState.coverClicked ? "center" : "flex-start",
+          alignItems: coverContainerState.coverClicked
+            ? "center"
+            : "flex-start",
           lineHeight: coverContainerState.coverClicked ? "2.5" : "1.0",
-          
         }}
       >
         <h1>Hi</h1>
-        <div className={classes.profile}>
+        <div
+          className={classes.profile}
+        >
           With a diverse professional background, I offer a unique combination
           of technical expertise and managerial skills. Having pursued
           postgraduate studies in Computer Science at the University of Science
@@ -132,38 +134,41 @@ export function Header():JSX.Element {
         )}
       </div>
     </div>
-    ): (
-      <div style={{
-        height:'10vh',
-        backgroundColor:'rgb(46, 47, 47)',
-      }}><img
-      className={classes.circleNav}
-      title="Go to CV"
-      alt="Logo"
-      src={process.env.PUBLIC_URL + "/Img/logo.png"}
-      onClick={() => navigate("/")}
-    />
-    <img
-      className={classes.circleNav}
-      title="Go to Games"
-      alt="Logo"
-      src={process.env.PUBLIC_URL + "/Img/joystick.webp"}
-      onClick={() => navigate("/Games")}
-    />
-    <img
-      className={classes.circleNav}
-      title="Go to Memory"
-      alt="Logo"
-      src={process.env.PUBLIC_URL + "/Img/cover.png"}
-      onClick={() => navigate("/Memory")}
-    />
-    <img
-      className={classes.circleNav}
-      title="Go to Snake"
-      alt="Logo"
-      src={process.env.PUBLIC_URL + "/Img/snake.jpeg"}
-      onClick={() => navigate("/Snake")}
-    /></div>
-      
-    )}
-
+  ) : (
+    <div
+      style={{
+        height: "10vh",
+        backgroundColor: "rgb(46, 47, 47)",
+      }}
+    >
+      <img
+        className={classes.circleNav}
+        title="Go to CV"
+        alt="Logo"
+        src={process.env.PUBLIC_URL + "/Img/logo.png"}
+        onClick={() => navigate("/")}
+      />
+      <img
+        className={classes.circleNav}
+        title="Go to Games"
+        alt="Logo"
+        src={process.env.PUBLIC_URL + "/Img/joystick.webp"}
+        onClick={() => navigate("/Games")}
+      />
+      <img
+        className={classes.circleNav}
+        title="Go to Memory"
+        alt="Logo"
+        src={process.env.PUBLIC_URL + "/Img/cover.png"}
+        onClick={() => navigate("/Memory")}
+      />
+      <img
+        className={classes.circleNav}
+        title="Go to Snake"
+        alt="Logo"
+        src={process.env.PUBLIC_URL + "/Img/snake.jpeg"}
+        onClick={() => navigate("/Snake")}
+      />
+    </div>
+  );
+}
