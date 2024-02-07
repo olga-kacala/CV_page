@@ -1,60 +1,38 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import classes from "./Home.module.css";
-import { motion } from "framer-motion";
 import { Animation } from "../Animation/Animation";
 import { Link } from "react-router-dom";
 
 export function Home() {
-  const educationRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredExperience, setHoveredExperience] = useState<number | null>(
     null
   );
-  const [isVisible, setIsVisible] = useState(false);
   const projectsTextRef = useRef<HTMLDivElement>(null);
   const [isProjectsTextVisible, setIsProjectsTextVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const educationElement = educationRef.current;
+    const handleVisibility = (entries: IntersectionObserverEntry[]) => {
+      const [entry] = entries;
 
-      if (educationElement) {
-        const position = educationElement.getBoundingClientRect();
-
-        const progress = Math.max(
-          0,
-          Math.min(
-            1,
-            (position.top + window.innerHeight * 1) / window.innerHeight
-          )
-        );
-
-        setScrollProgress(progress);
+      if (entry.isIntersecting) {
+        setIsProjectsTextVisible(true);
+      } else {
+        setIsProjectsTextVisible(false);
       }
     };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-            setIsVisible(true);
-          } else {
-            setIsVisible(false);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+    const projectsTextObserver = new IntersectionObserver(handleVisibility, {
+      threshold: 0.1,
+    });
 
-    if (educationRef.current) {
-      observer.observe(educationRef.current);
+    if (projectsTextRef.current) {
+      projectsTextObserver.observe(projectsTextRef.current);
     }
 
-    window.addEventListener("scroll", handleScroll);
-
     return () => {
-      observer.disconnect();
-      window.removeEventListener("scroll", handleScroll);
+      if (projectsTextRef.current) {
+        projectsTextObserver.unobserve(projectsTextRef.current);
+      }
     };
   }, []);
 
@@ -155,46 +133,6 @@ export function Home() {
     },
   ];
 
-  const listItemVariants = {
-    hidden: { opacity: 0, y: "-100%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeInOut" },
-    },
-  };
-
-  const listVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 1.5 } },
-  };
-
-  useEffect(() => {
-    const handleVisibility = (entries: IntersectionObserverEntry[]) => {
-      const [entry] = entries;
-
-      if (entry.isIntersecting) {
-        setIsProjectsTextVisible(true);
-      } else {
-        setIsProjectsTextVisible(false);
-      }
-    };
-
-    const projectsTextObserver = new IntersectionObserver(handleVisibility, {
-      threshold: 0.1,
-    });
-
-    if (projectsTextRef.current) {
-      projectsTextObserver.observe(projectsTextRef.current);
-    }
-
-    return () => {
-      if (projectsTextRef.current) {
-        projectsTextObserver.unobserve(projectsTextRef.current);
-      }
-    };
-  }, []);
-
   const windowScrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -204,20 +142,10 @@ export function Home() {
 
   return (
     <div className={classes.home}>
-      <motion.div
-        ref={educationRef}
-        animate={{
-          opacity: isVisible ? 1 : 0.9,
-          y: isVisible ? `${scrollProgress * 1}vh` : 0,
-          translateZ: 0,
-        }}
-        initial={{ opacity: 0, y: "-0vh", translateZ: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        style={{ overflow: "hidden" }}
-      >
+      <div>
         <div>
           <h2>My timeline</h2>
-          <motion.ul variants={listVariants} initial="hidden" animate="visible">
+          <ul>
             {experiences.map((experience, index) => (
               <div
                 className={classes.timelineItem}
@@ -225,37 +153,23 @@ export function Home() {
                 onMouseEnter={() => setHoveredExperience(index)}
                 onMouseLeave={() => setHoveredExperience(null)}
               >
-                <motion.li
-                  variants={listItemVariants}
-                  className={classes[experience.class]}
-                >
+                <li className={classes[experience.class]}>
                   <h3>{experience.title}</h3>
                   <p>{experience.institution}</p>
                   <p>{experience.date}</p>
                   {hoveredExperience === index && experience.details && (
-                    <motion.ul
-                      variants={listVariants}
-                      initial="hidden"
-                      animate={isVisible ? "visible" : "hidden"}
-                    >
+                    <ul>
                       {experience.details.map((detail, i) => (
-                        <motion.li
-                          key={i}
-                          variants={listItemVariants}
-                          initial="hidden"
-                          animate="visible"
-                        >
-                          {detail}
-                        </motion.li>
+                        <li key={i}>{detail}</li>
                       ))}
-                    </motion.ul>
+                    </ul>
                   )}
-                </motion.li>
+                </li>
               </div>
             ))}
-          </motion.ul>
+          </ul>
         </div>
-      </motion.div>
+      </div>
 
       <Animation />
       <Link to={"/Games"}>games</Link>

@@ -1,11 +1,10 @@
 .snakeContainer {
-  width: 100vw;
   margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 77vh;
   background-color: rgb(46, 47, 47);
 }
 
@@ -34,7 +33,7 @@
   color: #66fcf1;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
   .Snake {
     height: 400px;
   }

@@ -258,13 +258,14 @@ p {
     opacity: 1;
   }
 }
+
 @keyframes writeText {
   to {
     width: 100%;
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
   .home h2 {
     width: 90vw;
     padding: 6vw 0 6vw 6vw;
@@ -360,4 +361,3 @@ p {
     padding: 4vw;
   }
 }
-
