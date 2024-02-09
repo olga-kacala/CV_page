@@ -122,7 +122,7 @@
 // };
 
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Canvas } from "./Canvas/Canvas";
 import classes from "./Snake.module.css";
 import { useGameLogic, Direction } from "./GameLogic";
@@ -212,6 +212,21 @@ export const Snake: React.FC<GameProps> = ({}) => {
       }
     }
   };
+
+  useEffect(() => {
+    // Handle key events globally
+    const handleKeyDown = (event: KeyboardEvent) => {
+      onKeyDownHandler(event as any as React.KeyboardEvent<HTMLDivElement>); // Cast the event type
+    };
+  
+    document.body.addEventListener('keydown', handleKeyDown);
+  
+    return () => {
+      // Cleanup event listener on component unmount
+      document.body.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [onKeyDownHandler]);
+  
 
   return (
     <div className={classes.snakeContainer}>

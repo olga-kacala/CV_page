@@ -99,7 +99,7 @@ export const useGameLogic = ({
     ]);
   }, [canvasHeight, canvasWidth]);
 
-  const onKeyDownHandler = (event: React.KeyboardEvent<HTMLDivElement>) => {
+  const onKeyDownHandler = (event: React.KeyboardEvent) => {
     switch (event.code) {
       case "KeyS":
         if (direction !== Direction.UP) {
