@@ -6,7 +6,6 @@
   align-items: center;
   height: 76vh;
   background-color: rgb(46, 47, 47);
-  
 }
 
 .snakeGame {
@@ -28,23 +27,47 @@
 
 .yourScore {
   color: white;
-}
-
-.congratsMessage {
-  color: #66fcf1;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .titleContainer {
   height: 11vh;
+  text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
+.proTip {
+  display: none;
+}
 
+@media (max-width: 450px) {
   .snakeTitle {
     font-size: 2em;
   }
 
   .yourScore {
     font-size: 1em;
+  }
+
+  .proTip {
+    display: none;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 1000px) {
+  .snakeTitle {
+    font-size: 2em;
+  }
+
+  .yourScore {
+    font-size: 1em;
+  }
+
+  .proTip {
+    display: none;
+  }
+
+  .titleContainer {
+    height: 15vh;
   }
 }

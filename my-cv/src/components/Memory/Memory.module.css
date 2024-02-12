@@ -30,7 +30,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 450px) {
   .cardGrid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3px;
@@ -44,3 +44,19 @@
     font-size: 1em;
   }
 }
+
+@media (min-width: 451px) and (max-width: 1000px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3px;
+  }
+
+  .memoryTitle {
+    font-size: 2em;
+  }
+
+  .turns {
+    font-size: 1em;
+  }
+}
+

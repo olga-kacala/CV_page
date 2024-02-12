@@ -36,7 +36,7 @@
   font-size: 6em;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 450px) {
   .imageContainer {
     display: flex;
     flex-direction: column;
@@ -47,6 +47,27 @@
     width: 50vw;
     margin: 5px;
     max-width: 280px;
+  }
+
+  .hello {
+    font-size: 2em;
+  }
+
+  .inviteBox > h2 {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 1000px) {
+  .imageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageContainer img {
+    margin: 5px;
   }
 
   .hello {

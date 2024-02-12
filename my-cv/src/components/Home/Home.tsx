@@ -180,7 +180,7 @@ export function Home() {
         }`}
         ref={projectsTextRef}
       >
-        Alright, let's get back to business...
+        ...Alright, let's get back to business...
       </div>
 
       <h2>My Projects</h2>

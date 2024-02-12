@@ -31,21 +31,29 @@ export const Snake: React.FC<GameProps> = ({}) => {
   return (
     <div className={classes.snakeContainer}>
       <div className={classes.titleContainer}>
-      <div className={classes.snakeTitle}>Snake it</div>
-      <h2 className={classes.yourScore}>{`Your score: ${(snakeBody.length - 1) * 10}`}</h2>
-      {gameState === GameState.GAME_OVER && (
-        <div className={classes.congratsMessage}>
-          Game over! You finished the game with {(snakeBody.length - 1) * 10}{" "}
-          turns!
-        </div>
-      )}
+        <div className={classes.snakeTitle}>Snake it</div>
+        
+        {gameState !== GameState.GAME_OVER && (
+          <div className={classes.yourScore}>{`Your score: ${
+            (snakeBody.length - 1) * 10
+          }`}</div>
+        )}
+        {gameState === GameState.GAME_OVER && (
+          <div className={classes.yourScore}>
+            Game over! You finished the game with {(snakeBody.length - 1) * 10}{" "}
+            turns!
+          </div>
+        )}
       </div>
-      
 
-
-      <div className={classes.snakeGame} onKeyDown={onKeyDownHandler} tabIndex={0}>
+      <div
+        className={classes.snakeGame}
+        onKeyDown={onKeyDownHandler}
+        tabIndex={0}
+      >
         <Canvas ref={canvasRef} draw={drawGame} />
-        <p>
+
+        <p className={classes.proTip}>
           <strong>Pro tip</strong>: use <kbd>w,s,a,d</kbd> keys to move
         </p>
         {gameState === GameState.GAME_OVER ? (
@@ -73,4 +81,4 @@ export const Snake: React.FC<GameProps> = ({}) => {
       </div>
     </div>
   );
-}
+};

@@ -1,16 +1,22 @@
 .Canvas {
-border: 20px solid black;
-width: 800px;
-height: 400px;
-box-sizing: border-box;
-border-image-slice: 1;
-border-image-source: linear-gradient(to left, #743ad5,#558B83);
-margin:0;
+  border: 20px solid black;
+  width: 800px;
+  height: 400px;
+  box-sizing: border-box;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #558b83);
+  margin: 0;
 }
 
-@media screen and (max-width: 1000px){
-.Canvas {
-    width:  100vw;
+@media (max-width: 450px) {
+  .Canvas {
+    width: 100vw;
+  }
 }
-};
-    
+
+@media (min-width: 451px) and (max-width: 1000px) {
+  .Canvas {
+    width: 100vw;
+    height: 40vh;
+  }
+}

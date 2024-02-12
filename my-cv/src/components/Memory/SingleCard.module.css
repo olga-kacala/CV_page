@@ -37,7 +37,7 @@
   transition-delay: 0s;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 450px) {
   .card {
     display: flex;
     justify-content: center;
@@ -50,4 +50,17 @@
     margin: 3px;
   }
 
+}
+@media (min-width: 451px) and (max-width: 1000px) {
+  .card {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .front, .card .back {
+    width: 12vh;
+    height: 12vh;
+    margin: 3px;
+  }
 }

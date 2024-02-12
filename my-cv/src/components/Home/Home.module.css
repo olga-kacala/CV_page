@@ -74,7 +74,7 @@ p {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  padding: 40px 0 40px 40px;
+  padding: 40px 0 40px 0;
   font-size: larger;
 }
 
@@ -265,7 +265,7 @@ p {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 450px) {
   .home h2 {
     width: 90vw;
     padding: 6vw 0 6vw 6vw;
@@ -355,5 +355,108 @@ p {
 
   .Logo {
     padding: 4vw;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 1300px) {
+  .home h2 {
+    width: 90vw;
+    padding: 6vw 0 6vw 6vw;
+  }
+
+  .education,
+  .timelineItem,
+  .experience {
+    width: 98vw;
+    padding: 1vw;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 98vw;
+  }
+
+  .projectsText.visible {
+    animation: writeText 10s linear forwards;
+    padding: 2vw 0 2vw 2vw;
+    font-size: small;
+  }
+
+  .project {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projectDescription {
+    width: 90vw;
+    padding: 0;
+    margin: 0;
+    font-size: small;
+    text-align: center;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .projectScreen {
+    width: 100vw;
+    height: auto;
+  }
+
+  .project:hover::after {
+    top: 20%;
+    font-size: medium;
+  }
+
+  .projectQR {
+    display: none;
+  }
+
+  .timelineItem {
+    animation-duration: 0.5s;
+  }
+
+  .mainTechnology img {
+    height: 23vh;
+    max-height: none;
+  }
+
+  .referencesContainer {
+    width: 100vw;
+    height: auto;
+  }
+
+  .referencesContainer img {
+    width: 20vw;
+  }
+
+  .gpt {
+    width: 96vw;
+    height: auto;
+    margin: 2vw;
+    padding: 4vw;
+  }
+
+  .gptText {
+    width: 90vw;
+    height: auto;
+    font-size: small;
+  }
+
+  .Logo {
+    padding: 4vw;
+  }
+
+  .basicTechnology img {
+    max-height: 12vh;
+    margin: 10px;
+  }
+
+  .mainLang img {
+    height: 23vh;
   }
 }
