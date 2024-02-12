@@ -12,7 +12,7 @@
 .Snake {
   display: flex;
   justify-content: center;
-  height: 40vh;
+  /* height: 40vh; */
   align-items: center;
   outline: none;
   flex-direction: column;
@@ -22,8 +22,7 @@
 
 .snakeTitle {
   font-weight: bold;
-  /* color: #66fcf1; */
-  color: #12ed6a;
+  color: #66fcf1;
   font-size: 4rem;
 }
 
