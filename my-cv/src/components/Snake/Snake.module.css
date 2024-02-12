@@ -1,4 +1,5 @@
 .snakeContainer {
+  background-color: red!important;
   margin: 0px;
   display: flex;
   flex-direction: column;
@@ -6,7 +7,7 @@
   align-items: center;
   height: 76vh;
   /* background-color: rgb(46, 47, 47); */
-  background-color: red;
+  
 }
 
 .Snake {
@@ -22,7 +23,8 @@
 
 .snakeTitle {
   font-weight: bold;
-  color: #66fcf1;
+  /* color: #66fcf1; */
+  color: #121ded;
   font-size: 4rem;
 }
 
