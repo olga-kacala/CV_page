@@ -12,7 +12,7 @@
 .snakeGame {
   display: flex;
   justify-content: center;
-  height: 70vh;
+  height: 65vh;
   align-items: center;
   outline: none;
   flex-direction: column;
@@ -32,6 +32,10 @@
 
 .congratsMessage {
   color: #66fcf1;
+}
+
+.snakeTitle {
+  height: 11vh;
 }
 
 @media screen and (max-width: 1000px) {

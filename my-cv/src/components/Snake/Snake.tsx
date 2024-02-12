@@ -30,6 +30,7 @@ export const Snake: React.FC<GameProps> = ({}) => {
   };
   return (
     <div className={classes.snakeContainer}>
+      <div className={classes.titleContainer}>
       <div className={classes.snakeTitle}>Snake it</div>
       <h2 className={classes.yourScore}>{`Your score: ${(snakeBody.length - 1) * 10}`}</h2>
       {gameState === GameState.GAME_OVER && (
@@ -38,6 +39,10 @@ export const Snake: React.FC<GameProps> = ({}) => {
           turns!
         </div>
       )}
+      </div>
+      
+
+
       <div className={classes.snakeGame} onKeyDown={onKeyDownHandler} tabIndex={0}>
         <Canvas ref={canvasRef} draw={drawGame} />
         <p>
