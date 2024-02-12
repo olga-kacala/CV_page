@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center;
   height: 76vh;
-  background-color: rgb(46, 47, 47);
+  /* background-color: rgb(46, 47, 47); */
+  background-color: red;
 }
 
 .memoryTitle {
