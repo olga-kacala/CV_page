@@ -32,9 +32,6 @@
 
 @media screen and (max-width: 1000px) {
   .cardGrid {
-    justify-content: center;
-    margin: 0px;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3px;
   }

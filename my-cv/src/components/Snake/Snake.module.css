@@ -9,10 +9,10 @@
   
 }
 
-.Snake {
+.snakeGame {
   display: flex;
   justify-content: center;
-  /* height: 40vh; */
+  height: 70vh;
   align-items: center;
   outline: none;
   flex-direction: column;
@@ -35,9 +35,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .Snake {
-    height: 400px;
-  }
 
   .snakeTitle {
     font-size: 2em;

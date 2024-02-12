@@ -38,7 +38,7 @@ export const Snake: React.FC<GameProps> = ({}) => {
           turns!
         </div>
       )}
-      <div className={classes.Snake} onKeyDown={onKeyDownHandler} tabIndex={0}>
+      <div className={classes.snakeGame} onKeyDown={onKeyDownHandler} tabIndex={0}>
         <Canvas ref={canvasRef} draw={drawGame} />
         <p>
           <strong>Pro tip</strong>: use <kbd>w,s,a,d</kbd> keys to move
