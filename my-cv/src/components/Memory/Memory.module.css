@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 77vh;
+  height: 76vh;
   background-color: rgb(46, 47, 47);
 }
 
@@ -15,10 +15,6 @@
   text-align: center;
 }
 
-.memory h2 {
-  color: white;
-}
-
 .cardGrid {
   justify-content: center;
   display: grid;
@@ -26,17 +22,28 @@
   grid-gap: 2vw;
 }
 
-.congratsMessage {
-  color: #66fcf1;
+.turns {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 1vh;
+  margin: 0;
 }
 
 @media screen and (max-width: 1000px) {
-  
   .cardGrid {
     justify-content: center;
     margin: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3px;
+  }
+
+  .memoryTitle {
+    font-size: 2em;
+  }
+
+  .turns {
+    font-size: 1em;
   }
 }

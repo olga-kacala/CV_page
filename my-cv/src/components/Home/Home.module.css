@@ -274,19 +274,19 @@ p {
   .education,
   .timelineItem,
   .experience {
-    width: 100vw;
-    padding: 2vw;
+    width: 98vw;
+    padding: 1vw;
   }
 
   ul {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 98vw;
   }
 
   .projectsText.visible {
     animation: writeText 10s linear forwards;
-    padding: 2vw;
+    padding: 2vw 0 2vw 2vw;
     font-size: small;
   }
 
@@ -327,10 +327,6 @@ p {
     animation-duration: 0.5s;
   }
 
-  .mainTechnology {
-    justify-content: center;
-  }
-
   .mainTechnology img {
     height: 15vh;
   }
@@ -345,7 +341,7 @@ p {
   }
 
   .gpt {
-    width: 100vw;
+    width: 96vw;
     height: auto;
     margin: 2vw;
     padding: 4vw;

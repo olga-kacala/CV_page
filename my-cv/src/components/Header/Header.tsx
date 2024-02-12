@@ -137,7 +137,7 @@ export function Header(): JSX.Element {
   ) : (
     <div
       style={{
-        height: "10vh",
+        height: "11vh",
         backgroundColor: "rgb(46, 47, 47)",
       }}
     >

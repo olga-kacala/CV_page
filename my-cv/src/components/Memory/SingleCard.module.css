@@ -16,6 +16,7 @@
   position: absolute;
   border: 2px solid white;
   width: 12vw;
+  max-width: 200px;
 }
 
 .flipped .front {
@@ -28,6 +29,7 @@
   transition-delay: 0.2s;
   border: 2px solid #558b83;
   width: 12vw;
+  max-width: 200px;
 }
 
 .flipped .back {
@@ -42,15 +44,10 @@
     margin: 0px;
   }
 
-  .front {
-    width: 100px;
-    height: 100px;
+  .front, .card .back {
+    width: 12vh;
+    height: 12vh;
     margin: 3px;
   }
 
-  .card .back {
-    width: 100px;
-    height: 100px;
-    margin: 3px;
-  }
 }

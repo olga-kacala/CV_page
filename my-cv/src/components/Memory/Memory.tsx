@@ -81,8 +81,9 @@ const [gameCompleted, setGameCompleted] = useState(false);
   return (
     <div className={classes.memory}>
       <div className={classes.memoryTitle}>Memory Match</div>
-      <h2>Turns:{turns}</h2>
-      {gameCompleted && <div className={classes.congratsMessage}>Congratulations! You finished the game in {turns} turns!</div>}
+      {!gameCompleted && <h2 className={classes.turns}>Turns:{turns}</h2>}
+      
+      {gameCompleted && <div className={classes.turns}>Congrats! You finished game in {turns} turns!</div>}
       <div className={classes.cardGrid}>
         {cards.map((card) => (
           <SingleCard

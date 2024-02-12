@@ -17,6 +17,7 @@
 .profileImg {
   width: 20vw;
   height: auto;
+  max-width: 330px;
 }
 
 .Logo {

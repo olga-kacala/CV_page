@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 77vh;
+  height: 76vh;
   background-color: rgb(46, 47, 47);
 }
 
@@ -36,5 +36,13 @@
 @media screen and (max-width: 1000px) {
   .Snake {
     height: 400px;
+  }
+
+  .snakeTitle {
+    font-size: 2em;
+  }
+
+  .snakeContainer >h2 {
+    font-size: 1em;
   }
 }
