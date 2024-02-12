@@ -31,7 +31,7 @@ export const Snake: React.FC<GameProps> = ({}) => {
   return (
     <div className={classes.snakeContainer}>
       <div className={classes.snakeTitle}>Snake it</div>
-      <h2>{`Your score: ${(snakeBody.length - 1) * 10}`}</h2>
+      <h2 className={classes.yourScore}>{`Your score: ${(snakeBody.length - 1) * 10}`}</h2>
       {gameState === GameState.GAME_OVER && (
         <div className={classes.congratsMessage}>
           Game over! You finished the game with {(snakeBody.length - 1) * 10}{" "}

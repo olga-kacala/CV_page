@@ -1,12 +1,11 @@
 .snakeContainer {
-  background-color: red!important;
   margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 76vh;
-  /* background-color: rgb(46, 47, 47); */
+  background-color: rgb(46, 47, 47);
   
 }
 
@@ -24,11 +23,11 @@
 .snakeTitle {
   font-weight: bold;
   /* color: #66fcf1; */
-  color: #121ded;
+  color: #12ed6a;
   font-size: 4rem;
 }
 
-.snakeContainer h2 {
+.yourScore {
   color: white;
 }
 
@@ -45,7 +44,7 @@
     font-size: 2em;
   }
 
-  .snakeContainer h2 {
+  .yourScore {
     font-size: 1em;
   }
 }
