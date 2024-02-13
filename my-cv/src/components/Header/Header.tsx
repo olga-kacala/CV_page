@@ -60,7 +60,8 @@ export function Header(): JSX.Element {
           </div>
           <div className={classes.contact}>
             Email:
-            <br /> olga.kacala@gmail.com
+            <br />{" "}
+            <span className={classes.breakWord}>olga.kacala@gmail.com</span>
           </div>
           <div className={classes.contact}>
             Location:
@@ -115,9 +116,7 @@ export function Header(): JSX.Element {
         }}
       >
         <h1>Hi</h1>
-        <div
-          className={classes.profile}
-        >
+        <div className={classes.profile}>
           With a diverse professional background, I offer a unique combination
           of technical expertise and managerial skills. Having pursued
           postgraduate studies in Computer Science at the University of Science

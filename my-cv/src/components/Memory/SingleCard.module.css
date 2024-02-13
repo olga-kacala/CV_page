@@ -15,7 +15,7 @@
   transform: rotateY(90deg);
   position: absolute;
   border: 2px solid white;
-  width: 12vw;
+  width: 12vh;
   max-width: 200px;
 }
 
@@ -28,7 +28,7 @@
   transition: all ease-in 0.2s;
   transition-delay: 0.2s;
   border: 2px solid #558b83;
-  width: 12vw;
+  width: 12vh;
   max-width: 200px;
 }
 
@@ -44,12 +44,11 @@
     margin: 0px;
   }
 
-  .front, .card .back {
-    width: 12vh;
+  .front,
+  .card .back {
     height: 12vh;
     margin: 3px;
   }
-
 }
 @media (min-width: 451px) and (max-width: 1000px) {
   .card {
@@ -58,8 +57,8 @@
     margin: 0px;
   }
 
-  .front, .card .back {
-    width: 12vh;
+  .front,
+  .card .back {
     height: 12vh;
     margin: 3px;
   }

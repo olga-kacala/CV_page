@@ -22,7 +22,7 @@
 .imageContainer img {
   width: 18vw;
   border-radius: 6px;
-  margin: 5vh 2vh 0 2vh;
+  margin: 0 2vh 0 2vh;
 }
 
 .imageContainer > img:hover,
@@ -33,7 +33,7 @@
 .hello {
   font-weight: bold;
   color: #66fcf1;
-  font-size: 6em;
+  font-size: 6rem;
 }
 
 @media (max-width: 450px) {

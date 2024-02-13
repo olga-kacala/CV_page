@@ -19,7 +19,7 @@
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2vw;
+  grid-gap: 8px;
 }
 
 .turns {
@@ -59,4 +59,3 @@
     font-size: 1em;
   }
 }
-

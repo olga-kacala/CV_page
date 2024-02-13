@@ -172,8 +172,7 @@ export function Home() {
       </div>
 
       <Animation />
-      <Link to={"/Games"}>games</Link>
-
+      
       <div
         className={`${classes.projectsText} ${
           isProjectsTextVisible && classes.visible
