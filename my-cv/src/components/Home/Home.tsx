@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import classes from "./Home.module.css";
 import { Animation } from "../Animation/Animation";
-import { Link } from "react-router-dom";
 
 export function Home() {
   const [hoveredExperience, setHoveredExperience] = useState<number | null>(
