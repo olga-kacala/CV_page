@@ -193,7 +193,7 @@ export function Home() {
           />
           <a
             className={classes.projectLinks}
-            href="https://github.com/olga-kacala/Go-for-a-walkie"
+            href="https://olga-kacala.github.io/Go-for-a-walkie/#/Home"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -212,7 +212,7 @@ export function Home() {
             Spice up their profiles with cute photos. Check the weather, grab
             the leash, and have a 'paw-some' time with your furry friends! 🐶
             <a
-              href="https://olga-kacala.github.io/Go-for-a-walkie/#/Home"
+              href="https://github.com/olga-kacala/Go-for-a-walkie"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -261,7 +261,6 @@ export function Home() {
         </div>
       </div>
 
-
       <div className={classes.project} data-hover-text="Group Project">
         <div className={classes.box}>
           <img
@@ -306,10 +305,6 @@ export function Home() {
           </div>
         </div>
       </div>
-
-
-
-      
 
       <h2>My Technology</h2>
       <div className={classes.myTechnologyContainer}>
