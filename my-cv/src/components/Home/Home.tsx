@@ -171,7 +171,7 @@ export function Home() {
       </div>
 
       <Animation />
-      
+
       <div
         className={`${classes.projectsText} ${
           isProjectsTextVisible && classes.visible
@@ -182,6 +182,85 @@ export function Home() {
       </div>
 
       <h2>My Projects</h2>
+
+      <div className={classes.project} data-hover-text="Passion Project">
+        <div className={classes.box}>
+          <img
+            className={classes.projectQR}
+            title="Scan me"
+            alt="QR code"
+            src={process.env.PUBLIC_URL + "/Img/qrWalkie.png"}
+          />
+          <a
+            className={classes.projectLinks}
+            href="https://github.com/olga-kacala/Go-for-a-walkie"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={classes.projectScreen}
+              title="Walkie"
+              alt="Walkie"
+              src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
+            />
+          </a>
+
+          <div className={classes.projectDescription}>
+            <br /> Welcome to Walkie! 🐾 Unleash the fun with our app,
+            connecting pet owners for paws-itively delightful walks. Manage your
+            pet squad with ease—add details like names, ages, breeds, and more.
+            Spice up their profiles with cute photos. Check the weather, grab
+            the leash, and have a 'paw-some' time with your furry friends! 🐶
+            <a
+              href="https://olga-kacala.github.io/Go-for-a-walkie/#/Home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className={classes.Logo}
+                title="GH"
+                alt="GitHub"
+                src={process.env.PUBLIC_URL + "/Img/github-logo.webp"}
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className={classes.project} data-hover-text="Commercial Project">
+        <div className={classes.box}>
+          <img
+            className={classes.projectQR}
+            title="Scan me"
+            alt="QR code"
+            src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
+          />
+          <a
+            className={classes.projectLinks}
+            href="https://www.kursy-krakow-krzykalski.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={classes.projectScreen}
+              title="Krakow Courses"
+              alt="Krakow Courses"
+              src={process.env.PUBLIC_URL + "/Img/KrakowCourses.png"}
+            />
+          </a>
+          <div className={classes.projectDescription}>
+            This React-based project utilizes React Router for navigation,
+            featuring pages such as Home, Tour, Language, and Contact. The
+            application incorporates responsive design with CSS modules for
+            styling, ensuring a visually appealing user interface. Language
+            courses are highlighted, complete with dynamic scrolling
+            functionality. The Tour section showcases a carousel of images and
+            detailed information about guided tours in Krakow, demonstrating the
+            project's interactive and informative nature.
+          </div>
+        </div>
+      </div>
+
 
       <div className={classes.project} data-hover-text="Group Project">
         <div className={classes.box}>
@@ -227,84 +306,10 @@ export function Home() {
           </div>
         </div>
       </div>
-      <div className={classes.project} data-hover-text="Commercial Project">
-        <div className={classes.box}>
-          <img
-            className={classes.projectQR}
-            title="Scan me"
-            alt="QR code"
-            src={process.env.PUBLIC_URL + "/Img/qrKursy.png"}
-          />
-          <a
-            className={classes.projectLinks}
-            href="https://www.kursy-krakow-krzykalski.pl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className={classes.projectScreen}
-              title="Krakow Courses"
-              alt="Krakow Courses"
-              src={process.env.PUBLIC_URL + "/Img/KrakowCourses.png"}
-            />
-          </a>
-          <div className={classes.projectDescription}>
-            This React-based project utilizes React Router for navigation,
-            featuring pages such as Home, Tour, Language, and Contact. The
-            application incorporates responsive design with CSS modules for
-            styling, ensuring a visually appealing user interface. Language
-            courses are highlighted, complete with dynamic scrolling
-            functionality. The Tour section showcases a carousel of images and
-            detailed information about guided tours in Krakow, demonstrating the
-            project's interactive and informative nature.
-          </div>
-        </div>
-      </div>
 
-      <div className={classes.project} data-hover-text="Passion Project">
-        <div className={classes.box}>
-          <img
-            className={classes.projectQR}
-            title="Scan me"
-            alt="QR code"
-            src={process.env.PUBLIC_URL + "/Img/qrWalkie.png"}
-          />
-          <a
-            className={classes.projectLinks}
-            href="https://olga-kacala.github.io/Go-for-a-walkie/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className={classes.projectScreen}
-              title="Walkie"
-              alt="Walkie"
-              src={process.env.PUBLIC_URL + "/Img/Walkie.png"}
-            />
-          </a>
 
-          <div className={classes.projectDescription}>
-            🚧🚧!UNDER CONSTRUCTION!🚧🚧
-            <br /> Welcome to Walkie! 🐾 Unleash the fun with our app,
-            connecting pet owners for paws-itively delightful walks. Manage your
-            pet squad with ease—add details like names, ages, breeds, and more.
-            Spice up their profiles with cute photos. Check the weather, grab
-            the leash, and have a 'paw-some' time with your furry friends! 🐶
-            <a
-              href="https://github.com/olga-kacala/Go-for-a-walkie"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className={classes.Logo}
-                title="GH"
-                alt="GitHub"
-                src={process.env.PUBLIC_URL + "/Img/github-logo.webp"}
-              />
-            </a>
-          </div>
-        </div>
-      </div>
+
+      
 
       <h2>My Technology</h2>
       <div className={classes.myTechnologyContainer}>
