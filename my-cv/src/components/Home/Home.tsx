@@ -330,6 +330,11 @@ export function Home() {
             alt="JavaScript icon"
             src={process.env.PUBLIC_URL + "/Img/Javascript.png"}
           />
+           <img
+            title="NodeJS"
+            alt="Node Js icon"
+            src={process.env.PUBLIC_URL + "/Img/node-js.png"}
+          />
           <img
             title="Firebase"
             alt="Firebase icon"
